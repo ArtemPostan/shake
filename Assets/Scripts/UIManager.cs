@@ -44,7 +44,13 @@ public class UIManager : MonoBehaviour
 
 
     [SerializeField]
-    private GameObject MobilePanel;   
+    private GameObject MobilePanel;
+
+    [SerializeField]
+    public Joystick JoystickUI;
+
+    [SerializeField]
+    public Joystick FireJoystickUI;
 
     private float overShowTimer;
 
@@ -61,7 +67,13 @@ public class UIManager : MonoBehaviour
 
 	private void Start()
 	{
-	}
+		if (GameManager.Instance.isMobile)
+		{
+            isMobilePanelActive(true);
+			return;
+        }
+        isMobilePanelActive(false);
+    }
 
 	public void Init(Camera _camera)
 	{

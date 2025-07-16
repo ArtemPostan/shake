@@ -9,4 +9,9 @@ public class PauseListener : MonoBehaviour
 			LevelManager.Paused = !LevelManager.Paused;
 		}
 	}
+
+	public void OnClick_PauseMenu()
+	{
+        LevelManager.Paused = !LevelManager.Paused;
+    }
 }

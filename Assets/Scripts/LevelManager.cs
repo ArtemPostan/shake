@@ -172,14 +172,22 @@ public class LevelManager : MonoBehaviour
  //   }
     private void Start()
 	{
-	}
+        if (GameManager.Instance.isMobile)
+            InvisePointer();
+    }
 
 	private void Update()
 	{
-		Cursor.lockState = CursorLockMode.None;
+        if (GameManager.Instance.isMobile)
+        {
+            Cursor.visible = false;
+        }
+        Cursor.lockState = CursorLockMode.None;
 		if (paused)
 		{
+			if (!GameManager.Instance.isMobile)
 			Cursor.visible = true;
+			
 		}
 		if (readyToLoad)
 		{
@@ -482,5 +490,10 @@ public class LevelManager : MonoBehaviour
 		{
 			instance.TryLoadLevel(instance.levelIndex);
 		}
+	}
+
+	private void InvisePointer()
+	{
+		pointerPfb.GetComponent<SpriteRenderer>().enabled = false;
 	}
 }

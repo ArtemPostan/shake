@@ -4,228 +4,181 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerControl : MonoBehaviour
 {
-	[SerializeField]
-	private float speed;
+    [SerializeField] private float speed;
+    [SerializeField] private float fastSpeed = 10f;
+    [SerializeField] private float maxSpeed;
+    [SerializeField] private float jumpSpeed = 2f;
+    [SerializeField] private FpsCameraArm fpsCameraArm;
+    public Transform sideCameraTransform;
 
-	[SerializeField]
-	private float fastSpeed = 10f;
+    private Rigidbody rb;
+    private Vector3 velocityTemp;
+    private Transform pointer;
+    private Combat combat;
+    private float fpsPitch;
+    public Transform groundChecker;
+    public LayerMask groundLayer;
+    private bool checkGround;
 
-	[SerializeField]
-	private float maxSpeed;
+    public bool floatingMode;
+    public bool dashMode;
+    public float dashTime = 0.15f;
+    private float dashTimer;
+    public float dashCoolTime = 0.5f;
+    private float dashCoolTimer;
+    public float dashSpeed = 20f;
+    private Vector3 dashDirection;
 
-	[SerializeField]
-	private float jumpSpeed = 2f;
+    public Transform firstPersonCameraTransform => fpsCameraArm.transform;
+    public float MaxSpeed => maxSpeed;
+    public Combat Combat => combat;
 
-	[SerializeField]
-	private FpsCameraArm fpsCameraArm;
+    private Joystick joystick;
+    private bool isMobile;
 
-	public Transform sideCameraTransform;
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+        combat = GetComponent<Combat>();
+        isMobile = GameManager.Instance.isMobile;
+    }
 
-	private Rigidbody rb;
+    private void Start()
+    {
+        pointer = GameManager.Instance.LevelManager.Pointer;
+        if (isMobile)
+        {
+            joystick = GameManager.Instance.UIManager.JoystickUI.GetComponent<Joystick>();
+        }
+    }
 
-	private Vector3 moveDirection;
+    private void Update()
+    {
+        if (!combat.IsDead && Time.timeScale != 0f)
+        {
+            switch (GameManager.Instance.LevelManager.game3CType)
+            {
+                case LevelManager.game3Ctypes.topDown:
+                    UpdateTopDownMovement();
+                    break;
+                case LevelManager.game3Ctypes.fps:
+                    UpdateFpsView();
+                    UpdateFpsMovement();
+                    break;
+            }
+        }
+    }
 
-	private Vector3 velocityTemp;
+    private void FixedUpdate()
+    {
+        checkGround = CheckGround();
+        if (!checkGround && GameManager.Instance.LevelManager.game3CType == LevelManager.game3Ctypes.fps)
+        {
+            rb.AddForce(-Physics.gravity * 0.3f, ForceMode.Acceleration);
+        }
+    }
 
-	private Transform pointer;
+    private bool CheckGround()
+    {
+        return Physics.Raycast(groundChecker.position, Vector3.down, 0.3f, groundLayer);
+    }
 
-	private Combat combat;
+    private void UpdateDash(Vector3 directionInput)
+    {
+        if (!dashMode) return;
 
-	private float fpsPitch;
+        if (dashCoolTimer > 0f) dashCoolTimer -= Time.deltaTime;
+        if (dashTimer > 0f) dashTimer -= Time.deltaTime;
 
-	public Transform groundChecker;
+        bool dashTriggered = !isMobile
+            ? Input.GetMouseButtonDown(1)
+            : false; // или UI кнопка, если ты добавишь её
 
-	public LayerMask groundLayer;
+        if (dashTriggered && dashCoolTimer <= 0f)
+        {
+            dashCoolTimer = dashCoolTime;
+            dashTimer = dashTime;
+            dashDirection = directionInput.magnitude < 0.9f ? transform.forward : directionInput;
+            AudioManager.PlaySFXAtPosition("Dash", transform.position);
+        }
 
-	private bool checkGround;
+        if (dashTimer > 0f)
+        {
+            rb.velocity = dashDirection * dashSpeed;
+        }
+    }
 
-	public bool floatingMode;
+    private void UpdateTopDownMovement()
+    {
+        Vector3 input = isMobile
+            ? new Vector3(joystick.Horizontal, 0f, joystick.Vertical)
+            : new Vector3(
+                (Input.GetKey(KeyCode.D) ? 1f : 0f) - (Input.GetKey(KeyCode.A) ? 1f : 0f),
+                0f,
+                (Input.GetKey(KeyCode.W) ? 1f : 0f) - (Input.GetKey(KeyCode.S) ? 1f : 0f)
+            );
 
-	public bool dashMode;
+        Vector3 direction = input.normalized;
+        float currentSpeed = dashMode ? fastSpeed : speed;
 
-	public float dashTime = 0.15f;
+        velocityTemp = Quaternion.Euler(0f, GameManager.Instance.CameraManager.TopDownCameraArm.transform.eulerAngles.y, 0f) * direction * currentSpeed;
+        velocityTemp.y = rb.velocity.y;
+        rb.velocity = velocityTemp;
 
-	private float dashTimer;
+        Vector3 toPointer = FCTool.Vector3YToZero(pointer.position - transform.position).normalized;
+        UpdateDash(toPointer);
+    }
 
-	public float dashCoolTime = 0.5f;
+    private void UpdateFpsMovement()
+    {
+        Vector3 input = isMobile
+            ? new Vector3(joystick.Horizontal, 0f, joystick.Vertical)
+            : new Vector3(
+                (Input.GetKey(KeyCode.D) ? 1f : 0f) - (Input.GetKey(KeyCode.A) ? 1f : 0f),
+                0f,
+                (Input.GetKey(KeyCode.W) ? 1f : 0f) - (Input.GetKey(KeyCode.S) ? 1f : 0f)
+            );
 
-	private float dashCoolTimer;
+        Vector3 direction = input.normalized;
+        float currentSpeed = dashMode ? fastSpeed : speed;
 
-	public float dashSpeed = 20f;
+        if (GameManager.Instance.CameraManager.FpsCameraArm)
+        {
+            if (GameManager.Instance.CameraManager.FpsCameraArm.Ads)
+                currentSpeed *= 0.7f;
 
-	private Vector3 dashDirection;
+            Vector3 forward = FCTool.Vector3YToZero(GameManager.Instance.CameraManager.FpsCameraArm.transform.forward).normalized;
+            Vector3 right = FCTool.Vector3YToZero(GameManager.Instance.CameraManager.FpsCameraArm.transform.right).normalized;
 
-	public Transform firstPersonCameraTransform => fpsCameraArm.transform;
+            velocityTemp = (forward * direction.z + right * direction.x).normalized * currentSpeed;
+            velocityTemp.y = rb.velocity.y;
+        }
 
-	public float MaxSpeed => maxSpeed;
+        if (!isMobile && Input.GetKeyDown(KeyCode.Space) && checkGround)
+        {
+            velocityTemp.y = jumpSpeed;
+        }
 
-	public Combat Combat => combat;
+        if (Input.GetKey(KeyCode.Space) && floatingMode && velocityTemp.y < 0f)
+        {
+            velocityTemp.y = 0f;
+        }
 
-	private void Awake()
-	{
-		rb = GetComponent<Rigidbody>();
-		combat = GetComponent<Combat>();
-	}
+        rb.velocity = velocityTemp;
 
-	private void Start()
-	{
-		pointer = GameManager.Instance.LevelManager.Pointer;
-	}
+        Vector3 dashDir = (FCTool.Vector3YToZero(GameManager.Instance.CameraManager.FpsCameraArm.transform.forward) * direction.z +
+                           FCTool.Vector3YToZero(GameManager.Instance.CameraManager.FpsCameraArm.transform.right) * direction.x).normalized;
 
-	private void Update()
-	{
-		if (!combat.IsDead && Time.timeScale != 0f)
-		{
-			switch (GameManager.Instance.LevelManager.game3CType)
-			{
-			case LevelManager.game3Ctypes.topDown:
-				UpdateTopDownMovement();
-				break;
-			case LevelManager.game3Ctypes.fps:
-				UpdateFpsView();
-				UpdateFpsMovement();
-				break;
-			}
-		}
-	}
+        UpdateDash(dashDir);
+    }
 
-	private void FixedUpdate()
-	{
-		checkGround = CheckGround();
-		if (!checkGround && GameManager.Instance.LevelManager.game3CType == LevelManager.game3Ctypes.fps)
-		{
-			rb.AddForce(-Physics.gravity * 0.3f, ForceMode.Acceleration);
-		}
-	}
+    private void UpdateFpsView()
+    {
+        if (isMobile) return; // пока не реализовано для мобилок
 
-	private bool CheckGround()
-	{
-		Ray ray = default(Ray);
-		ray.direction = Vector3.down;
-		ray.origin = groundChecker.position;
-		return Physics.Raycast(ray, 0.3f, groundLayer);
-	}
-
-	private void UpdateDash(Vector3 directionInput)
-	{
-		if (!dashMode)
-		{
-			return;
-		}
-		if (dashCoolTimer > 0f)
-		{
-			dashCoolTimer -= Time.deltaTime;
-		}
-		if (dashTimer > 0f)
-		{
-			dashTimer -= Time.deltaTime;
-		}
-		if (Input.GetMouseButtonDown(1) && dashCoolTimer <= 0f)
-		{
-			dashCoolTimer = dashCoolTime;
-			dashTimer = dashTime;
-			dashDirection = directionInput;
-			if (dashDirection.magnitude < 0.9f)
-			{
-				dashDirection = base.transform.forward;
-			}
-			AudioManager.PlaySFXAtPosition("Dash", base.transform.position);
-		}
-		if (dashTimer > 0f)
-		{
-			rb.velocity = dashDirection * dashSpeed;
-		}
-	}
-
-	private void UpdateTopDownMovement()
-	{
-		Vector3 a = Vector3.zero;
-		if (UnityEngine.Input.GetKey(KeyCode.A))
-		{
-			a += Vector3.left;
-		}
-		if (UnityEngine.Input.GetKey(KeyCode.D))
-		{
-			a += Vector3.right;
-		}
-		if (UnityEngine.Input.GetKey(KeyCode.W))
-		{
-			a += Vector3.forward;
-		}
-		if (UnityEngine.Input.GetKey(KeyCode.S))
-		{
-			a += Vector3.back;
-		}
-		a = a.normalized;
-		float d = speed;
-		if (dashMode)
-		{
-			d = fastSpeed;
-		}
-		velocityTemp = (Quaternion.Euler(0f, GameManager.Instance.CameraManager.TopDownCameraArm.transform.rotation.eulerAngles.y, 0f) * a).normalized * d;
-		velocityTemp.y = rb.velocity.y;
-		rb.velocity = velocityTemp;
-		UnityEngine.Debug.DrawLine(base.transform.position, base.transform.position + rb.velocity);
-		Vector3 normalized = FCTool.Vector3YToZero(pointer.transform.position - base.transform.position).normalized;
-		UpdateDash(normalized);
-	}
-
-	private void UpdateFpsMovement()
-	{
-		Vector3 a = Vector3.zero;
-		if (UnityEngine.Input.GetKey(KeyCode.A))
-		{
-			a += Vector3.left;
-		}
-		if (UnityEngine.Input.GetKey(KeyCode.D))
-		{
-			a += Vector3.right;
-		}
-		if (UnityEngine.Input.GetKey(KeyCode.W))
-		{
-			a += Vector3.forward;
-		}
-		if (UnityEngine.Input.GetKey(KeyCode.S))
-		{
-			a += Vector3.back;
-		}
-		a = a.normalized;
-		float num = speed;
-		if (dashMode)
-		{
-			num = fastSpeed;
-		}
-		if ((bool)GameManager.Instance.CameraManager.FpsCameraArm)
-		{
-			if (GameManager.Instance.CameraManager.FpsCameraArm.Ads)
-			{
-				num *= 0.7f;
-			}
-			velocityTemp = (FCTool.Vector3YToZero(GameManager.Instance.CameraManager.FpsCameraArm.transform.forward).normalized * a.z + FCTool.Vector3YToZero(GameManager.Instance.CameraManager.FpsCameraArm.transform.right).normalized * a.x).normalized * num;
-			velocityTemp.y = rb.velocity.y;
-		}
-		if (UnityEngine.Input.GetKeyDown(KeyCode.Space) && checkGround)
-		{
-			velocityTemp.y = jumpSpeed;
-		}
-		if (UnityEngine.Input.GetKey(KeyCode.Space) && floatingMode && velocityTemp.y < 0f)
-		{
-			velocityTemp.y = 0f;
-		}
-		rb.velocity = velocityTemp;
-		UpdateDash((FCTool.Vector3YToZero(GameManager.Instance.CameraManager.FpsCameraArm.transform.forward).normalized * a.z + FCTool.Vector3YToZero(GameManager.Instance.CameraManager.FpsCameraArm.transform.right).normalized * a.x).normalized);
-	}
-
-	private void UpdateFpsView()
-	{
-		base.transform.rotation = Quaternion.Euler(0f, base.transform.rotation.eulerAngles.y + UnityEngine.Input.GetAxis("mouse x") * fpsCameraArm.Sensitivity, 0f);
-		fpsPitch += UnityEngine.Input.GetAxis("mouse y") * (0f - fpsCameraArm.Sensitivity);
-		fpsPitch = Mathf.Clamp(fpsPitch, -89.9f, 89.9f);
-		firstPersonCameraTransform.localRotation = Quaternion.Euler(fpsPitch, 0f, 0f);
-	}
-
-	private Vector3 Vector3YToZero(Vector3 v3)
-	{
-		return new Vector3(v3.x, 0f, v3.z);
-	}
+        transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y + Input.GetAxis("mouse x") * fpsCameraArm.Sensitivity, 0f);
+        fpsPitch += Input.GetAxis("mouse y") * -fpsCameraArm.Sensitivity;
+        fpsPitch = Mathf.Clamp(fpsPitch, -89.9f, 89.9f);
+        firstPersonCameraTransform.localRotation = Quaternion.Euler(fpsPitch, 0f, 0f);
+    }
 }
