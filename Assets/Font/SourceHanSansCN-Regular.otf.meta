@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 27358532e51c446a8b7316e2c135d147
+timeCreated: 1749089252
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: "SourceHanSansCN-Regular"
+  fontNames:
+  - Source Han Sans CN
+  - Source Han Sans
+  fallbackFontReferences: []
+  customCharacters:
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData:
+  assetBundleName: 
+  assetBundleVariant: 

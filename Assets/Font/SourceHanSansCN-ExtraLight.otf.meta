@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: bcd170619b7c4ad4a06460526d64f628
+timeCreated: 1749089251
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: "SourceHanSansCN-ExtraLight"
+  fontNames:
+  - Source Han Sans CN
+  - Source Han Sans
+  fallbackFontReferences: []
+  customCharacters:
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData:
+  assetBundleName: 
+  assetBundleVariant: 

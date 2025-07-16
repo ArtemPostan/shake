@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: "wall24 1"
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 2800000, guid: 53b74839381f4516bd8c89213b54884e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AmbientOcclusion:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Emission:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicSmoothness:
+        m_Texture: {fileID: 2800000, guid: eda1f30e853149cea8bfcf60c4c86e98, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: 15744eaf688f4a399cd65ebfb165017f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Falloff: 50
+    - _Falloff1: 50
+    - _Float0: 1
+    - _GridScale: 1
+    - _GridScale1: 0.25
+    - _Metallic: 0.45
+    - _Metallic1: 0
+    - _NormalScale: 1
+    - _OverlayAmount: 0.5
+    - _OverlayAmount1: 1
+    - _Smoothness: 0.65
+    - _Smoothness1: 0
+    - _TriplanarFallOff: 0.2
+    - __dirty: 0
+    m_Colors:
+    - _BaseColor: {r: 0.8848789, g: 0.9021448, b: 0.9150943, a: 0}
+    - _EmissionColor: {r: 34.29675, g: 2.103103, b: 2.103103, a: 0}
+    - _EmissionColor1: {r: 1, g: 1, b: 1, a: 0}
+    - _Tiling: {r: 0.15, g: 0.15, b: 0, a: 0}
+    - _Tint: {r: 0.7716828, g: 0.7830189, b: 0.7423906, a: 0}

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 264029a5cdc7464324e6e05a6c74d921, type: 3}
+  m_Name: "AmbientControl"
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  SkyColor:
+    overrideState: 1
+    value: {r: 0.7173492, g: 0.8563659, b: 1.020658, a: 1}
+  EquatorColor:
+    overrideState: 1
+    value: {r: 0.4433962, g: 0.2285923, b: 0.1484959, a: 1}
+  GroundColor:
+    overrideState: 1
+    value: {r: 0.3207547, g: 0.1696783, b: 0.08926664, a: 1}
+  edgeColor:
+    overrideState: 1
+    value: {r: 0.6376008, g: 1.177474, b: 1.71103, a: 1}
+  directionalLight:
+    overrideState: 0
+    value: 1
+  bgmVolumeGain:
+    overrideState: 0
+    value: 0

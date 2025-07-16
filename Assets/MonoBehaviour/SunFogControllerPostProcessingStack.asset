@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3a8663123bacf5c8115d7a3416f0ce, type: 3}
+  m_Name: "SunFogControllerPostProcessingStack"
+  m_EditorClassIdentifier: 
+  active: 0
+  enabled:
+    overrideState: 1
+    value: 1
+  _SunSize:
+    overrideState: 1
+    value: 0.00118
+  _SunEdge:
+    overrideState: 1
+    value: 0.001
+  _SunColor:
+    overrideState: 1
+    value: {r: 1, g: 1, b: 1, a: 1}
+  _SunIntensity:
+    overrideState: 1
+    value: 1
+  _SunFogIntensity:
+    overrideState: 1
+    value: 1
+  _SunFogPower:
+    overrideState: 1
+    value: 24
+  _SkyTopColor:
+    overrideState: 1
+    value: {r: 0.3349057, g: 0.6648358, b: 1, a: 1}
+  _SkyTopPower:
+    overrideState: 1
+    value: 1.3
+  _HorizonOffset:
+    overrideState: 1
+    value: 0
+  _SkyColor:
+    overrideState: 1
+    value: {r: 0.3066038, g: 0.6862421, b: 1, a: 1}
+  _SkyIntensity:
+    overrideState: 1
+    value: 1
+  _FogPower:
+    overrideState: 1
+    value: 1
+  _FogHeight:
+    overrideState: 1
+    value: -0.62
+  _FogFade:
+    overrideState: 1
+    value: 3.63
+  _HeightDensity:
+    overrideState: 1
+    value: 0.128
+  _HeightFogPower:
+    overrideState: 1
+    value: 3
+  _MaxHeightDensity:
+    overrideState: 1
+    value: 1
+  _FogStartDistance:
+    overrideState: 1
+    value: 0
+  _FogEndDistance:
+    overrideState: 1
+    value: 500
+  _FogDarkColor:
+    overrideState: 1
+    value: {r: 0, g: 0, b: 0, a: 1}
+  _FogDarkPower:
+    overrideState: 1
+    value: 1
+  _FogMinDarkness:
+    overrideState: 1
+    value: 1

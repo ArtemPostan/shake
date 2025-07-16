@@ -1,0 +1,1595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Generated file, do not modify, your changes will be overwritten (use AssetPostprocessor.OnGeneratedCSProject) -->
+  <PropertyGroup>
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{52A91A80-1951-18A5-2183-2C1636D9B79D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>.</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWarn>0169;USG0001</NoWarn>
+    <DefineConstants>UNITY_2022_3_14;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CLOTH;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_WEBGL;TEXTCORE_1_0_OR_NEWER;UNITY_WEBGL;UNITY_WEBGL_API;UNITY_DISABLE_WEB_VERIFICATION;UNITY_GFX_USE_PLATFORM_VSYNC;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_SPATIALTRACKING;ENABLE_IL2CPP;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\Player\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoConfig>true</NoConfig>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
+    <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UnityProjectGenerator>Package</UnityProjectGenerator>
+    <UnityProjectGeneratorVersion>2.0.23</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorStyle>Legacy</UnityProjectGeneratorStyle>
+    <UnityProjectType>GamePlugins:3</UnityProjectType>
+    <UnityBuildTarget>WebGL:20</UnityBuildTarget>
+    <UnityVersion>2022.3.14f1</UnityVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
+    <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Standard Assets\Scripts\DownloadClanActivityCountsResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES32DArrayType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamParentalSettings.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EInputActionOrigin.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamIPType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStoragePublishedFileUnsubscribed_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3ArrayType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\CreateBeaconCallback_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\MusicPlayerSelectsQueueEntry_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_SpriteRendererArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\AvatarImageLoaded_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GCMessageFailed_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_EmissionModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_ES3Ref.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamNetworking.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Cloud.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\Packsize.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_ES3RefDictionary.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Random.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamUtils.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_FontArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EDurationControlProgress.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EWorkshopVideoProvider.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_RectTransform.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Writer.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GamepadTextInputDismissed_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EItemUpdateStatus.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_OpenLinkInNewTab_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_ulong.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GSClientKick_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EWorkshopFileAction.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_FinishedRequest_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\UserStatsReceived_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\UGCQueryHandle_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamFriends.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES33DArrayType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageSubscribePublishedFileResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStoragePublishFileResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EVRScreenshotType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3AutoSaveMgr.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EParentalFeature.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EMarketingMessageFlags.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3WebClass.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GetAuthSessionTicketResponse_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_GradientAlphaKeyArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamAppUninstalled_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\FSteamNetworkingSocketsDebugOutput.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageFileShareResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3Debug.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3ReflectedComponentType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamGameServerUtils.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3File.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GlobalAchievementPercentagesReady_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_KeyframeArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\JoinPartyCallback_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTTPRequestHandle.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamInventoryStartPurchaseResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\EncryptedAppTicketResponse_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageFileReadAsyncComplete_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_SkinnedMeshRendererArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ETextFilteringContext.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_BoneWeightArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamGameServerUGC.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3ReflectedType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HSteamListenSocket.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStoragePublishedFileDeleted_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_ColorOverLifetimeModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3Prefab.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\P2PSessionState_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTTPCookieContainerHandle.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GSClientApprove_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_ShapeModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EBeginAuthSessionResult.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EGameSearchErrorCode_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_ImageArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_ForceOverLifetimeModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_SearchResults_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EUniverse.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\AssociateWithClanResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ScreenshotRequested_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_BoneWeight.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamInventoryUpdateHandle_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\CallbackIdentityAttribute.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_MeshRendererArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_UpdateToolTip_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageUpdateUserPublishedItemVoteResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamNetworkingUtils.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Color32Array.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EVRHMDType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Vector3Int.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_RenderTexture.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3Reflection.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_TextureSheetAnimationModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3InspectorInfo.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Vector3IntArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_char.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EUGCQuery.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamUser.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Rect.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SocketStatusCallback_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\CSteamAPIContext.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Font.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GetUserItemVoteResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_TrailModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3Stream.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\PartyBeaconID_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageAppSyncStatusCheck_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Vector3Array.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_BoxCollider.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\OverlayBrowserProtocolNavigation_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_MaterialArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Vector4Array.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\FavoritesListAccountsUpdated_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GCMessageAvailable_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_long.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EWorkshopVote.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3AutoSave.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamMatchmaking.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_SpriteRenderer.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ClanOfficerListResponse_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTTPRequestCompleted_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_AudioClip.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\InputAnalogActionHandle_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_boolArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamNetworkingConfigValue.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EUGCReadAction.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_ES3PrefabInternal.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SNetListenSocket_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamInventoryDefinitionUpdate_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_DateTimeArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\LobbyDataUpdate_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SideCamera.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamGameServerNetworkingUtils.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ManifestId_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3JSONReader.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\AudioPlayback_Status.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_ulongArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\MusicPlayerWantsPlay_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ISteamNetworkingSignalingRecvContext.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamNetworkingIdentity.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Transform.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3ReflectedValueType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ScreenshotHandle.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_NeedsPaint_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_FlareArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Image.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamGameServerHTTP.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GameConnectedFriendChatMsg_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3QueueType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_bool.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_ParticleSystem.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_ColorBySpeedModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_SphereCollider.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EHTMLMouseButton.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EP2PSessionError.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\PlayerAcceptState_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamIPAddress_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamNetworkingSocketsDebugOutputType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Camera.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EAppType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_PolygonCollider2DArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_NoiseModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EAuthSessionResponse.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_float.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3Member.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_VerticalScroll_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\LobbyInvite_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_AnimationCurve.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EAppReleaseState.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamDatagramGameCoordinatorServerLogin.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EActivateGameOverlayToWebPageMode.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\InputHandle_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_PhysicsMaterial2D.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\CreateItemResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\EncryptionAlgorithm.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3SerializableSettings.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EWorkshopFileType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EMarketNotAllowedReasonFlags.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_short.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_SetCursor_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_CapsuleCollider.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\EndGameResultCallback_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EHTMLKeyModifiers.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamItemDef_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_NewWindow_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamNetworkingPOPID.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Vector2Array.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_MeshFilterArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_PhysicMaterial.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\CallbackDispatcher.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EChatSteamIDInstanceFlags.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HSteamNetConnection.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EUserUGCListSortOrder.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3FileStream.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageEnumerateWorkshopFilesResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3ReferenceMgr.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamPartyBeaconLocation_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageAppSyncProgress_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStoragePublishedFileUpdated_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ELobbyType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageEnumerateUserSharedWorkshopFilesResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_MeshCollider.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3ReflectedObjectType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamNetConnectionInfo_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\MusicPlayerSelectsPlaylistEntry_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3ResourcesStream.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_enum.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamParentalSettingsChanged_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ELobbyDistanceFilter.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamApps.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GetAppDependenciesResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\DepotId_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_IntPtrArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamNetworkingConfigDataType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\P2PSessionRequest_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\AvailableBeaconLocationsUpdated_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EItemPreviewType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3GlobalReferences.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ISteamMatchmakingRulesResponse.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageSetUserPublishedFileActionResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTTPRequestDataReceived_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_UIntPtrArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageAppSyncedClient_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_JSConfirm_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\AppProofOfPurchaseKeyResponse_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamRelayNetworkStatus_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EGCResults.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Bounds.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamInventoryResultReady_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3UserType_RigidbodyArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\FavoritesListChanged_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageUnsubscribePublishedFileResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\TimedTrialStatus_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamIPv6ConnectivityProtocol.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ChangeNumOpenSlotsCallback_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStoragePublishFileProgress_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_doubleArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\VirtualCameraShakeSetter.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamUGCQueryCompleted_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ValidateAuthTicketResponse_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ReservationNotificationCallback_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Gradient.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EChatMemberStateChange.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GameLobbyJoinRequested_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\InputMotionData_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ISteamMatchmakingServerListResponse.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\FriendRichPresenceUpdate_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3SpecialByte.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Vector3.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HAuthTicket.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_BoxCollider2D.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\LeaderboardFindResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamGameSearch.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\StopPlaytimeTrackingResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_RotationOverLifetimeModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\MusicPlayerWantsPause_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3CacheWriter.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\FriendsGetFollowerCount_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamShutdown_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GlobalStatsReceived_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamNetworkingQuickConnectionStatus.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\CSteamID.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamAPICallCompleted_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_DateTime.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EAppOwnershipFlags.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamInputType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamParamStringArray_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\DllCheck.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EFriendFlags.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_StartRequest_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GetOPFSettingsResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Flare.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EVoiceResult.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamScreenshots.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Texture.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_StringArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EOverlayToStoreFlag.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GSReputation_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3ReflectedUnityObjectType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamNetworkingErrMsg.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EXboxOrigin.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\Constants.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamPartyBeaconLocationType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageEnumerateUserPublishedFilesResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\FriendsIsFollowing_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamDatagramHostedAddress.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_byteArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\UnbufferedCryptoStream.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageAppSyncedServer_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\FileDetailsResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\LeaderboardScoresDownloaded_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\MusicPlayerWantsPlayingRepeatStatus_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3ObjectType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_ShowToolTip_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\UserFavoriteItemsListChanged_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamNetworkingSockets.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GSClientAchievementStatus_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\P2PSessionConnectFail_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\LobbyMatchList_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\LobbyChatUpdate_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamGameServer.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ScalableMesh.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_SkinnedMeshRenderer.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HSteamNetPollGroup.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ClientGameServerDeny_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\UserStatsStored_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Spreadsheet.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EPlayerResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SunFogControllerPostProcessingStack.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\LobbyCreated_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_MeshFilter.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_MainModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamNetworkingIdentityType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\UserStatsUnloaded_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\DeleteItemResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_IntPtr.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Sprite.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Texture2D.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ENotificationPosition.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\LeaderboardUGCSet_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ELeaderboardUploadScoreMethod.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_InheritVelocityModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ISteamMatchmakingPlayersResponse.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_ES3RefArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RegisterActivationCodeResponse_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\LeaderboardEntry_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\gameserveritem_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EPersonaChange.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3IO.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ItemInstalled_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamIPv6ConnectivityState.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3NonSerializable.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_BoundsArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\CallResult.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\AddAppDependencyResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3Hash.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\JoinClanChatRoomCompletionResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Rigidbody.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Data.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_TriggerModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamNetConnectionStatusChangedCallback_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamEncryptedAppTicket.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTTPRequestHeadersReceived_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamGameServerStats.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamPartyBeaconLocationData.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Ref.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3ReferenceMgrBase.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\LobbyKicked_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\PersonaStateChange_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\servernetadr_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageDownloadUGCResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamMatchmakingServers.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3TypeMgr.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Keyframe.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_BrowserRestarted_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EUserUGCList.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Matrix4x4.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_TextureArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\OrbitCamera.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_MinMaxCurve.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\MicroTxnAuthorizationResponse_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HHTMLBrowser.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_sbyteArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_PhysicsMaterial2DArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamUGCDetails_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Serializable.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamHTTP.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\NumberOfCurrentPlayers_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\InputDigitalActionHandle_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\NativeMethods.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3StackType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RTime32.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SNetSocket_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3XMLReader.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_ColorArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ScreenshotReady_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamInventoryResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EDurationControlNotification.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_CloseBrowser_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SetUserItemVoteResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_CollisionModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamInventory.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\UGCHandle_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\DownloadItemResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GSStatsStored_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HSteamPipe.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoveAppDependencyResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3UnityObjectType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_AudioClipArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageUpdatePublishedFileResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\CheckFileSignature_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageEnumeratePublishedFilesByUserActionResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_BrowserReady_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\GameServer.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_uint.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamUGCRequestUGCDetailsResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\MusicPlayerRemoteWillDeactivate_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESNetSocketState.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamAppInstalled_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ERemoteStoragePublishedFileVisibility.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\AppId_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EResult.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EP2PSend.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Material.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Settings.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\LobbyChatMsg_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\UnreadChatMessagesChanged_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EBroadcastUploadResult.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamNetworkingConfigScope.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_GradientColorKey.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SunFogImageEffect.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_CanGoBackAndForward_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamLeaderboard_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EItemStatistic.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamRemotePlaySessionConnected_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GameConnectedChatLeave_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EHTTPStatusCode.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Vector2IntArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3Binary.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ActiveBeaconsUpdated_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\DlcInstalled_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamMusic.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_PhysicMaterialArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_RawImageArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_ShaderArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\LicensesUpdated_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GSClientDeny_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamAPICall_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamNetworkingConnectionState.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EFriendRelationship.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\PlaybackStatusHasChanged_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_MeshRenderer.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\CSteamGameServerAPIContext.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamNetworkingMessagesSessionRequest_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_RotationBySpeedModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3HashSetType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EAccountType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_UIntPtr.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_intArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\LobbyEnter_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_ES3Prefab.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EWorkshopEnumerationType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ELeaderboardDisplayType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_SubEmittersModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3FileMode.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\MusicPlayerWantsVolume_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_GameObjectArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\MusicPlayerWantsShuffled_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Vector4.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\MarketEligibilityResponse_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\AESEncryptionAlgorithm.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamInput.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ELaunchOptionType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamDeviceFormFactor.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3IdRefDictionary.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_ExternalForcesModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\MusicPlayerWantsLooped_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GSGameplayStats_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3XMLWriter.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStoragePublishedFileSubscribed_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamNetworkPingLocation_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamNetConnectionEnd.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_GameObject.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3PropertiesAttribute.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\PublishedFileUpdateHandle_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamMusicRemote.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_MeshColliderArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_double.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_shortArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SearchForGameProgressCallback_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RequestPlayersForGameFinalResultCallback_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamGameServerInventory.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_byte.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_GradientAlphaKey.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\FriendGameInfo_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\Version.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EDurationControlOnlineState.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_MinMaxGradient.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_HideToolTip_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_SizeOverLifetimeModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EChatEntryType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3ComponentType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_SizeBySpeedModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GSPolicyResponse_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamControllerPad.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_VelocityOverLifetimeModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EMouseCursor.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Color.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HSteamUser.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3DictionaryType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3DefaultSettings.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamInputLEDFlag.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GameConnectedClanChatMsg_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamItemFlags.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_string.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageGetPublishedItemVoteDetailsResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_HorizontalScroll_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GSClientGroupStatus_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_RenderTextureArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamNetworkingMessages.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\FriendsGroupID_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EChatRoomEnterResponse.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageGetPublishedFileDetailsResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EHTTPMethod.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3SerializableDictionary_TKey, TVal_.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EPersonaState.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3ReflectedScriptableObjectType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamGameServerNetworkingSockets.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_int.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageUserVoteDetails_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamHTMLSurface.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ERemoteStoragePlatform.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamLeaderboardEntries_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_uintArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\StartPlaytimeTrackingResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\StoreAuthURLResponse_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3RefIdDictionary.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamRemotePlaySessionDisconnected_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoveUGCDependencyResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\MusicPlayerRemoteToFront_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EMatchMakingServerResponse.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamAPI.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GameOverlayActivated_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EGamepadTextInputMode.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamServerConnectFailure_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\AddUGCDependencyResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\VolumeHasChanged_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EUGCMatchingUGCType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EGameIDType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Quaternion.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamNetworkingMessage_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_sbyte.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamNetworkingMessagesSessionFailed_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GSStatsUnloaded_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_FileOpenDialog_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\MusicPlayerRemoteWillActivate_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\LowBatteryPower_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EServerMode.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamVideo.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_ChangedTitle_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_GradientColorKeyArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Defaults.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HServerQuery.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamGameServerNetworking.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamNetworkingAvailability.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamNetworkingConfigValue_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\InputAnalogActionData_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamAPICallFailure.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ISteamNetworkingConnectionSignaling.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\UserAchievementStored_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\UGCUpdateHandle_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamNetAuthenticationStatus_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3PlayerPrefsStream.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_RandomArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Texture2DArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Mesh.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamServersConnected_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\InputDigitalActionData_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\MatchMakingKeyValuePair_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EUserRestriction.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SiteId_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\LobbyGameCreated_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_LinkAtPosition_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_charArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_RawImage.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3JSONWriter.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Color32.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_JSAlert_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\FreeCameraControl.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ERegisterActivationCodeResult.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Shader.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamGameServerClient.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_decimalArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ELobbyComparison.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamAppList.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ELeaderboardSortMethod.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamServersDisconnected_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_floatArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GameRichPresenceJoinRequested_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\Callback.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\MMKVPMarshaller.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\InputActionSetHandle_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESNetSocketConnectionType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\IPCFailure_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_ushort.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamInventoryFullUpdate_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EUserHasLicenseForAppResult.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\AccountID_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3ScriptableObjectType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_EventSystem.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\NewUrlLaunchParameters_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GameWebCallback_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamAPI_CheckCallbackRegistered_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamNetworkingMicroseconds.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RequestPlayersForGameResultCallback_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\MusicPlayerWantsPlayNext_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ELeaderboardDataRequest.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\UserAchievementIconFetched_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\DurationControl_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamInventoryRequestPricesResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamItemDetails_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamItemInstanceID_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_StatusText_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Vector2Int.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\IPCountry_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_PolygonCollider2D.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_QuaternionArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HServerListRequest.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ECheckFileSignature.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\CallbackMsg_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GSStatsReceived_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamUserStatType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EItemState.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamUserStats.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemotePlaySessionID_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\LeaderboardScoreUploaded_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamInventoryEligiblePromoItemDefIDs_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamRemoteStorage.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GetVideoURLResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GameConnectedChatJoin_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EGamepadTextInputLineMode.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SubmitItemUpdateResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamGameServerApps.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EFailureType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageEnumerateUserSubscribedFilesResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\InteropHelp.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Light.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\PublishedFileId_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SunFogController.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ISteamMatchmakingPingResponse.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamUGC.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamNetworkingGetConfigValueResult.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ComputeNewPlayerCompatibilityResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3CollectionType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamAPIWarningMessageHook_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\MusicPlayerWantsPlayPrevious_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\CallbackIdentities.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamParties.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Reader.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_LimitVelocityOverLifetimeModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SubmitPlayerResultResultCallback_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_longArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SteamNetworkingIPAddr.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageFileWriteAsyncComplete_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_LightsModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_LayerMask.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_decimal.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamClient.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3ListType.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SunFogControllerPostProcessingStackRenderer.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\GameServerChangeRequested_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\UGCFileWriteStreamHandle_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\MusicPlayerWillQuit_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\FriendsEnumerateFollowingList_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamRemotePlay.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Matrix4x4Array.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\HTML_URLChanged_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_ushortArray.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Vector2.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageDeletePublishedFileResult_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EInputSourceMode.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SetPersonaNameResponse_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EDenyReason.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Text.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SearchForGameResultCallback_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\RequestPlayersForGameProgressCallback_t.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Plugins\AmplifyColor.dll" />
+    <None Include="Assets\Plugins\Cinemachine.dll" />
+    <None Include="Assets\Plugins\steam_api64.dll" />
+    <None Include="Assets\Plugins\Unity.Recorder.dll" />
+    <None Include="Assets\Plugins\Sirenix.Utilities.dll" />
+    <None Include="Assets\Plugins\Sirenix.OdinInspector.Attributes.dll" />
+    <None Include="Assets\Plugins\UnityEngine.AutoStreamingModule.dll" />
+    <None Include="Assets\Plugins\Sirenix.Serialization.Config.dll" />
+    <None Include="Assets\Plugins\Unity.Postprocessing.Runtime.dll" />
+    <None Include="Assets\Plugins\lib_burst_generated.dll" />
+    <None Include="Assets\Plugins\Sirenix.OdinInspector.CompatibilityLayer.dll" />
+    <None Include="Assets\Plugins\lib_burst_generated.txt" />
+    <None Include="Assets\Plugins\Unity.Burst.dll" />
+    <None Include="Assets\Plugins\Unity.Burst.Unsafe.dll" />
+    <None Include="Assets\Plugins\Unity.Recorder.Base.dll" />
+    <None Include="Assets\Plugins\Unity.Mathematics.dll" />
+    <None Include="Assets\Plugins\Sirenix.Serialization.dll" />
+    <None Include="Assets\Plugins\Steamworks.NET.txt" />
+    <None Include="Assets\Plugins\Unity.Animation.Rigging.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.AIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.AccessibilityModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.AndroidJNIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.AnimationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.AudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.ClothModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ContentLoadModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.ContentLoadModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.CrashReportingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.DSPGraphModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.DirectorModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.GIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.GameCenterModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.GridModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.HotReloadModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.InputModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.LocalizationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.PerformanceReportingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.Physics2DModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.ProfilerModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PropertiesModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.PropertiesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.SharedInternalsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.SpriteShapeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.StreamingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.SubstanceModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.SubsystemsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.TLSModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.TerrainModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreTextEngineModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.TilemapModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.UIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.UmbraModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.UnityConnectModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.UnityCurlModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.VFXModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.VRModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.VehiclesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.VideoModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.WebGLModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.WebGLModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.WindModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed\UnityEngine.XRModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AmplifyColor">
+      <HintPath>Assets\Plugins\AmplifyColor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Assets\Plugins\Cinemachine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Recorder">
+      <HintPath>Assets\Plugins\Unity.Recorder.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sirenix.Utilities">
+      <HintPath>Assets\Plugins\Sirenix.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sirenix.OdinInspector.Attributes">
+      <HintPath>Assets\Plugins\Sirenix.OdinInspector.Attributes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AutoStreamingModule">
+      <HintPath>Assets\Plugins\UnityEngine.AutoStreamingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sirenix.Serialization.Config">
+      <HintPath>Assets\Plugins\Sirenix.Serialization.Config.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>Assets\Plugins\Unity.Postprocessing.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sirenix.OdinInspector.CompatibilityLayer">
+      <HintPath>Assets\Plugins\Sirenix.OdinInspector.CompatibilityLayer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>Assets\Plugins\Unity.Burst.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>Assets\Plugins\Unity.Burst.Unsafe.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Recorder.Base">
+      <HintPath>Assets\Plugins\Unity.Recorder.Base.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>Assets\Plugins\Unity.Mathematics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sirenix.Serialization">
+      <HintPath>Assets\Plugins\Sirenix.Serialization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Animation.Rigging">
+      <HintPath>Assets\Plugins\Unity.Animation.Rigging.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.7\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\Microsoft.Win32.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.AppContext">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.AppContext.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Buffers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Collections.Concurrent.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Collections.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.NonGeneric">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Collections.NonGeneric.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.Specialized">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Collections.Specialized.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ComponentModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.EventBasedAsync">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ComponentModel.EventBasedAsync.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ComponentModel.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ComponentModel.TypeConverter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Console.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Data.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Contracts">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.Contracts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Debug">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.Debug.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.FileVersionInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.Process.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.StackTrace.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.TextWriterTraceListener">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tools">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.Tools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.TraceSource">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.TraceSource.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.Tracing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Drawing.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Dynamic.Runtime">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Dynamic.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Globalization.Calendars.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Globalization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Globalization.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.Compression.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.ZipFile">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.FileSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.DriveInfo">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.FileSystem.DriveInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Watcher">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.FileSystem.Watcher.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.IsolatedStorage">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.IsolatedStorage.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.MemoryMappedFiles">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.MemoryMappedFiles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Pipes">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.Pipes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.UnmanagedMemoryStream">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.UnmanagedMemoryStream.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Linq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Expressions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Linq.Expressions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Parallel">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Linq.Parallel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Queryable">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Linq.Queryable.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Memory.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Http.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.NameResolution">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.NameResolution.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.NetworkInformation">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.NetworkInformation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Ping">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Ping.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Requests">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Requests.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Security">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Security.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Sockets">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Sockets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebHeaderCollection">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.WebHeaderCollection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebSockets.Client">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.WebSockets.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebSockets">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.WebSockets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Numerics.Vectors.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ObjectModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.DispatchProxy">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.DispatchProxy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.Emit.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.ILGeneration">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.Emit.ILGeneration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.Lightweight">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.Emit.Lightweight.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.Reader">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Resources.Reader.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.ResourceManager">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Resources.ResourceManager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.Writer">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Resources.Writer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.VisualC">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.CompilerServices.VisualC.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Handles">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Handles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.InteropServices.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Numerics">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Numerics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Serialization.Formatters.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Json">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Serialization.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Serialization.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Xml">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Serialization.Xml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Claims">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Claims.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Csp">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Cryptography.Csp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Principal">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Principal.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.SecureString">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.SecureString.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.Encoding">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Text.Encoding.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.Encoding.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Text.Encoding.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Text.RegularExpressions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Overlapped">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Overlapped.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Tasks.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Parallel">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Tasks.Parallel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Thread.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.ThreadPool">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.ThreadPool.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Timer">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Timer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ValueTuple.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.ReaderWriter">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.ReaderWriter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XDocument">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.XDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XmlDocument">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.XmlDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XmlSerializer">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.XmlSerializer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XPath">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.XPath.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XPath.XDocument">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.XPath.XDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\Extensions\2.0.0\System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\mscorlib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.ComponentModel.Composition.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Drawing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.IO.Compression.FileSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Numerics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Runtime.Serialization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.ServiceModel.Web.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Transactions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Transactions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Web.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Windows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Linq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Serialization">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Unity.Timeline.Player.csproj">
+      <Project>{7CF06294-91B1-1D3F-CE86-41061ABBC0AA}</Project>
+      <Name>Unity.Timeline.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Core.Player.csproj">
+      <Project>{3D113AFF-E317-A01B-AE2A-7F2F486EF3B9}</Project>
+      <Name>Unity.VisualScripting.Core.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.Player.csproj">
+      <Project>{EDAD4ECD-825B-D69A-8A49-C89AE121E51F}</Project>
+      <Name>UnityEngine.UI.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
+      <Project>{474C5DE9-B0DD-C557-EAD5-167DBA68C4D6}</Project>
+      <Name>Unity.VisualScripting.State.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Flow.Player.csproj">
+      <Project>{15E09BC8-8CFA-D0DE-AC7B-079146F0E80B}</Project>
+      <Name>Unity.VisualScripting.Flow.Player</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
