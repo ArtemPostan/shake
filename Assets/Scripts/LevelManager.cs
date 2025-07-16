@@ -76,6 +76,8 @@ public class LevelManager : MonoBehaviour
 
 	private bool countStarted;	
 
+	SurviveLevel SurviveLevel;
+
 	public static LevelManager instance
 	{
 		get
@@ -155,26 +157,20 @@ public class LevelManager : MonoBehaviour
 
 	public void SetLevelIndex(int _index)
 	{
-		levelIndex = _index;
-	}
+		levelIndex = _index;        
+    }
 
 	private void Awake()
 	{
 		levelIndex = 0;
 		LoadLevel(0);
 	}
-
-
-	//public void OnClickStart()
-	//{
- //       levelIndex = 0;
- //       LoadLevel(0);
- //   }
     private void Start()
 	{
-        if (GameManager.Instance.isMobile)
-            InvisePointer();
-    }
+		if (GameManager.Instance.isMobile)
+			InvisePointer();
+
+	}
 
 	private void Update()
 	{
@@ -226,7 +222,15 @@ public class LevelManager : MonoBehaviour
 
 	public void StartLevel(Vector3 _startPoint, int _targetCount)
 	{
-		if (gameMode == gameModes.rescue)
+		if (gameMode == gameModes.survive)
+		{
+			GameManager.Instance.UIManager.ResetUI();
+            SurviveLevel = GameObject.Find("SurviveLevel")?.GetComponent<SurviveLevel>();
+            targetCount = SurviveLevel.currentWave;
+        }
+		
+       
+        if (gameMode == gameModes.rescue)
 		{
 			targetCount = _targetCount;
 		}
@@ -439,7 +443,8 @@ public class LevelManager : MonoBehaviour
 	{
 		if (gameMode == gameModes.survive)
 		{
-            GameManager.Instance.UIManager.UpdateCount(teamBroCount, unsavedBroCount, targetCount);
+            GameManager.Instance.UIManager.UpdateTitles(true);
+            GameManager.Instance.UIManager.UpdateCount(SurviveLevel.currentWave, SurviveLevel.enemiesAlive, SurviveLevel.enemiesKilledTotal);
 			return;
         }
 		GameManager.Instance.UIManager.UpdateCount(teamBroCount, unsavedBroCount, targetCount);

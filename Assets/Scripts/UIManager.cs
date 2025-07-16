@@ -3,7 +3,15 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-	[SerializeField]
+     
+    [SerializeField]
+    private Text remainAliveCountText, targetWaveCountText;
+
+    //Для обычного режима
+    [SerializeField]
+    private Text remainTitle, targetTitle;     
+
+    [SerializeField]
 	private Canvas UiCanvas;
 
 	[SerializeField]
@@ -12,13 +20,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Image energyBarImage;
 
-    private Material healthBarMat;
+	[SerializeField] GameObject EnergyPanel;
 
-	[SerializeField]
-	private Text remainCountText;
-
-	[SerializeField]
-	private Text targetCountText;
+    private Material healthBarMat;	
 
 	public Color redColor;
 
@@ -45,6 +49,9 @@ public class UIManager : MonoBehaviour
 
     [SerializeField]
     private GameObject MobilePanel;
+
+    [SerializeField]
+    private GameObject TimerPanel;
 
     [SerializeField]
     public Joystick JoystickUI;
@@ -94,15 +101,20 @@ public class UIManager : MonoBehaviour
 
 	public void UpdateCount(int _teamCount, int _remainCount, int _targetCount)
 	{
-		remainCountText.text = _remainCount.ToString();
-		targetCountText.text = _teamCount.ToString() + "/" + _targetCount.ToString();
+        remainAliveCountText.text = _remainCount.ToString();
+		if (GameManager.Instance.LevelManager.gameMode == LevelManager.gameModes.survive)
+		{
+            targetWaveCountText.text = _teamCount.ToString();
+			return;
+        }
+        targetWaveCountText.text = _teamCount.ToString() + "/" + _targetCount.ToString();
 		if (_teamCount >= _targetCount)
 		{
-			targetCountText.color = greenColor;
+            targetWaveCountText.color = greenColor;
 		}
 		else
 		{
-			targetCountText.color = redColor;
+            targetWaveCountText.color = redColor;
 		}
 	}
 
@@ -162,5 +174,32 @@ public class UIManager : MonoBehaviour
 
 			MobilePanel.SetActive(false);
 		}
+    }
+	public void UpdateTitles(bool isSurvive)
+	{
+		if (isSurvive)
+		{
+			remainTitle.text = "Alive";
+			targetTitle.text = "Wave";
+            TimerPanel.SetActive(false);
+            EnergyPanel.SetActive(true);
+        } else
+		{
+            TimerPanel.SetActive(true);
+            EnergyPanel.SetActive(false);
+        }
+	}
+
+	public void ResetUI()
+	{
+		energyBarImage.fillAmount = 0;
+		healthBarImage.fillAmount = GameManager.Instance.LevelManager.Player.Combat.maxHealth;
+    }
+
+	public void UpdateUI()
+	{
+        energyBarImage.fillAmount = GameManager.Instance.LevelManager.Player.Combat.EnergyPercent;
+        healthBarImage.fillAmount = GameManager.Instance.LevelManager.Player.Combat.HealthPercent;
+
     }
 }

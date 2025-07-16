@@ -193,6 +193,7 @@
     <Compile Include="Assets\Scripts\MoveBetweenTwoPoints.cs" />
     <Compile Include="Assets\Scripts\SnakePart.cs" />
     <Compile Include="Assets\Scripts\HideIfSinglePlayer.cs" />
+    <Compile Include="Assets\Scripts\SurviveMode\Magnet.cs" />
     <Compile Include="Assets\Scripts\MouseSensitivityConfiguration.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\ShakePreset.cs" />
     <Compile Include="Assets\Scripts\SliderConfiguration.cs" />
@@ -233,6 +234,7 @@
     <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\Scripts\AutoAddForce.cs" />
+    <Compile Include="Assets\Scripts\EnemyDrop.cs" />
     <Compile Include="Assets\Scripts\AmplifyColor\VolumeEffectFlags.cs" />
     <Compile Include="Assets\Scripts\PlayASound.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
@@ -263,8 +265,10 @@
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\TopDownShooter\DoorKey.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\EditorPrefsX.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\KDTree.cs" />
+    <Compile Include="Assets\Scripts\SurviveMode\Health.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\UpdateType.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Scripts\SurviveMode\Receavable.cs" />
     <Compile Include="Assets\Scripts\RenderLayer.cs" />
     <Compile Include="Assets\Scripts\WideScreen.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\ProCamera2DTriggerZoom.cs" />
@@ -289,6 +293,7 @@
     <Compile Include="Assets\Scripts\AmplifyColorVolume.cs" />
     <Compile Include="Assets\Scripts\ScreenCapturer.cs" />
     <Compile Include="Assets\Scripts\MixerConfiguration.cs" />
+    <Compile Include="Assets\Scripts\SurviveMode\Diamond.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />

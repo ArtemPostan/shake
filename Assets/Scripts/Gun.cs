@@ -129,15 +129,21 @@ public class Gun : MonoBehaviour
         bool shouldShoot = false;
         Vector3 shootDirection = transform.forward;
 
-        if (!GameManager.Instance.isMobile)
+        if (team == 1)
         {
-            // ПК — мышь
-            shouldShoot = (autoTrigger && Input.GetMouseButton(0)) || (!autoTrigger && Input.GetMouseButtonDown(0));
+            // ВРАГ — стреляет в игрока
+            Vector3 toPlayer = player.transform.position - transform.position;
+            shootDirection = FCTool.Vector3YToZero(toPlayer).normalized;
+        }
+        else if (!GameManager.Instance.isMobile)
+        {
+            // ИГРОК на ПК — стреляет в сторону курсора
+            bool flag = (autoTrigger && Input.GetMouseButton(0)) || (!autoTrigger && Input.GetMouseButtonDown(0));
+            shouldShoot = flag;
 
             if (GameManager.Instance.LevelManager.game3CType != LevelManager.game3Ctypes.fps)
             {
                 Vector3 pointerDir = FCTool.Vector3YToZero(LevelManager.instance.Pointer.position - transform.position);
-
                 shootDirection = pointerDir.normalized;
             }
             else
@@ -147,16 +153,18 @@ public class Gun : MonoBehaviour
         }
         else
         {
-            // Мобильное устройство — джойстик стрельбы
-            
-            Vector3 joystickDir = new Vector3(fireJoystick.Horizontal, 0f, fireJoystick.Vertical);
+            // ИГРОК на телефоне — стреляет по направлению джойстика
+            Vector3 inputDir = new Vector3(fireJoystick.Horizontal, 0f, fireJoystick.Vertical);
 
-            if (joystickDir.magnitude > 0.2f)
+            if (inputDir.magnitude > 0.2f)
             {
                 shouldShoot = true;
-                shootDirection = joystickDir.normalized;
+                Transform cam = GameManager.Instance.CameraManager.TopDownCameraArm.transform;
+                shootDirection = cam.rotation * inputDir.normalized;
+                shootDirection = FCTool.Vector3YToZero(shootDirection).normalized;
             }
         }
+
 
         // Выполняем выстрел
         if ((canShoot || (shouldShoot && team != 1 && !player.Combat.IsDead)) && Active && shootTimer >= realShootTime)

@@ -26,7 +26,7 @@ public class LevelInfo : MonoBehaviour
 		{
 			GameManager gameManager = UnityEngine.Object.Instantiate(gameManagerPfb);
 			gameManager.Init();
-			gameManager.LevelManager.gameMode = testGameMode;
+			gameManager.LevelManager.gameMode = testGameMode;			
 			gameManager.LevelManager.game3CType = testGame3CTypes;
 			gameManager.LevelManager.SetLevelIndex(currentLevelIndex);
 			SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);

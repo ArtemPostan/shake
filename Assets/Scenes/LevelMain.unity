@@ -161,6 +161,158 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+--- !u!1 &292027048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 292027049}
+  - component: {fileID: 292027051}
+  - component: {fileID: 292027050}
+  m_Layer: 5
+  m_Name: EnergyBarDown
+  m_TagString: 
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &292027049
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292027048}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.25, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 471000113}
+  - {fileID: 1647420072}
+  m_Father: {fileID: 1791768368129757550}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -63, y: -160}
+  m_SizeDelta: {x: 127.1774, y: 127.1774}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &292027050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292027048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: f1b907eb6d5a410aaa48ef9f71b50760, type: 2}
+  m_Color: {r: 0.25, g: 0.813793, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3bf6d9f920f7458448a390f80318ebe6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &292027051
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292027048}
+  m_CullTransparentMesh: 1
+--- !u!1 &471000112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 471000113}
+  - component: {fileID: 471000114}
+  - component: {fileID: 471000115}
+  m_Layer: 5
+  m_Name: EnergyBar
+  m_TagString: 
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &471000113
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471000112}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 292027049}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 5.3169, y: 5.3169}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &471000114
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471000112}
+  m_CullTransparentMesh: 1
+--- !u!114 &471000115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471000112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 5b84c3ef04284d5a8d3b40a7f0cc0781, type: 2}
+  m_Color: {r: 0.96940887, g: 1, b: 0.081131995, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 9332cf0d233636a40a024382720294a3, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 1
+  m_FillAmount: 0
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &506776745
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,6 +626,105 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1647420071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1647420072}
+  - component: {fileID: 1647420075}
+  - component: {fileID: 1647420074}
+  - component: {fileID: 1647420073}
+  m_Layer: 5
+  m_Name: Energy
+  m_TagString: 
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1647420072
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647420071}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.3999995, y: 4, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 292027049}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -30, y: 3}
+  m_SizeDelta: {x: 118.6, y: 99}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1647420073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647420071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13d1d4fd760f52f1fd5724be455908b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncType: 1
+  ChineseObjects: []
+  EnglishObjects: []
+  text: {fileID: 1647420074}
+  textMesh: {fileID: 0}
+  ChineseText: Energy
+  EnglishText: Energy
+--- !u!114 &1647420074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647420071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 804a55f6ba7a44048c9790bfb17e761b, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 47b5f50567674b10bb576a1ad46cc1e8, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 121
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Energy
+--- !u!222 &1647420075
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647420071}
+  m_CullTransparentMesh: 1
 --- !u!1 &1696848768
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,7 +1095,7 @@ GameObject:
   - component: {fileID: 1791768366284263960}
   - component: {fileID: 1791768366284264089}
   m_Layer: 5
-  m_Name: Remain
+  m_Name: Remain/AliveTitle
   m_TagString: 
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -970,7 +1221,7 @@ GameObject:
   - component: {fileID: 1791768366284263947}
   - component: {fileID: 1791768366284264009}
   m_Layer: 5
-  m_Name: Target
+  m_Name: Target/Wave
   m_TagString: 
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1084,7 +1335,7 @@ GameObject:
   - component: {fileID: 1791768368096203013}
   - component: {fileID: 1791768366284263954}
   m_Layer: 5
-  m_Name: RemainCount
+  m_Name: RemainCount/AliveCount
   m_TagString: 
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1118,7 +1369,7 @@ GameObject:
   - component: {fileID: 1791768368096203010}
   - component: {fileID: 1791768366284263940}
   m_Layer: 5
-  m_Name: TeamCount
+  m_Name: TeamCount/WaveCount
   m_TagString: 
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1501,7 +1752,7 @@ GameObject:
   - component: {fileID: 1791768368096203043}
   - component: {fileID: 1791768366284264075}
   m_Layer: 5
-  m_Name: TargetPanel
+  m_Name: TargetPanel/AlivePanel
   m_TagString: 
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3308,7 +3559,7 @@ GameObject:
   - component: {fileID: 1791768368096203041}
   - component: {fileID: 1791768366284264067}
   m_Layer: 5
-  m_Name: TargetPanel
+  m_Name: TargetPanel/Wave
   m_TagString: 
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5126,7 +5377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: f1b907eb6d5a410aaa48ef9f71b50760, type: 2}
   m_Color: {r: 0.25, g: 0.813793, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5199,11 +5450,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95fc7db4098ac62a6e3e1194da26b243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  remainAliveCountText: {fileID: 1791768366284263954}
+  targetWaveCountText: {fileID: 1791768366284263940}
+  remainTitle: {fileID: 1791768366284263960}
+  targetTitle: {fileID: 1791768366284263947}
   UiCanvas: {fileID: 1791768368112980325}
   healthBarImage: {fileID: 1791768366284263949}
-  energyBarImage: {fileID: 0}
-  remainCountText: {fileID: 1791768366284263954}
-  targetCountText: {fileID: 1791768366284263940}
+  energyBarImage: {fileID: 471000115}
+  EnergyPanel: {fileID: 292027048}
   redColor: {r: 1, g: 0.1933962, b: 0.1933962, a: 1}
   greenColor: {r: 0.6286563, g: 1, b: 0.1084906, a: 1}
   defeatCanvasGroup: {fileID: 1791768368146534904}
@@ -5245,6 +5499,7 @@ MonoBehaviour:
   overShowTime: 2
   hudPanel: {fileID: 1791768364388438067}
   MobilePanel: {fileID: 1812016698}
+  TimerPanel: {fileID: 1791768364388438154}
   JoystickUI: {fileID: 1054479022}
   FireJoystickUI: {fileID: 1984450281}
 --- !u!114 &1791768366284263952
@@ -30831,6 +31086,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1791768368129757559}
+  - {fileID: 292027049}
   - {fileID: 1791768368129757651}
   m_Father: {fileID: 1791768368129757553}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

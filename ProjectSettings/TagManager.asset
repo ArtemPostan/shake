@@ -7,6 +7,7 @@ TagManager:
   - Record
   - RenderCamera
   - Sword
+  - Diamond
   layers:
   - Default
   - TransparentFX
@@ -41,6 +42,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: "Default"
+  - name: Default
     uniqueID: 0
     locked: 0

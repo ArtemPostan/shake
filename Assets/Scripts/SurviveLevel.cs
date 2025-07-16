@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class SurviveLevel : MonoBehaviour
 {
@@ -13,9 +14,9 @@ public class SurviveLevel : MonoBehaviour
     [SerializeField] private int enemiesPerWaveStart = 3;
     [SerializeField] private int enemyIncreasePerWave = 2;
 
-    private int currentWave = 0;
-    private int enemiesAlive = 0;
-    private int enemiesKilledTotal = 0;
+    public int currentWave = 0;
+    public int enemiesAlive = 0;
+    public int enemiesKilledTotal = 0;
 
     private void Start()
     {
@@ -33,6 +34,8 @@ public class SurviveLevel : MonoBehaviour
             int enemiesThisWave = enemiesPerWaveStart + enemyIncreasePerWave * (currentWave - 1);
             SpawnEnemies(enemiesThisWave);
         }
+
+
     }
 
     private void SpawnEnemies(int count)
@@ -50,19 +53,27 @@ public class SurviveLevel : MonoBehaviour
             Transform point = spawnPoints[Random.Range(0, spawnPoints.Length)];
             GameObject enemy = Instantiate(enemyPrefab, point.position, Quaternion.identity);
 
-            //EnemyHealth health = enemy.GetComponent<EnemyHealth>();
-            //if (health != null)
-            //    health.OnDeath += OnEnemyKilled;
+            Combat combat = enemy.GetComponent<Combat>();
+            if (combat != null)
+                combat.OnDie += OnEnemyKilled;
         }
 
         Debug.Log($"Wave {currentWave} spawned with {count} enemies.");
+        UpdateUI(currentWave, enemiesAlive, enemiesKilledTotal);
     }
 
-    private void OnEnemyKilled()
+    private void OnEnemyKilled(Combat deadEnemy)
     {
+        
+        
         enemiesAlive--;
         enemiesKilledTotal++;
-
+        UpdateUI(currentWave, enemiesAlive, enemiesKilledTotal);
         Debug.Log($"Enemy killed. Remaining: {enemiesAlive}. Total killed: {enemiesKilledTotal}");
+    }
+
+    private void UpdateUI(int wave, int alive, int killed)
+    {
+        GameManager.Instance.UIManager.UpdateCount(wave, alive, killed);
     }
 }

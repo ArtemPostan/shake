@@ -34,6 +34,7 @@ public class LevelTimer : MonoBehaviour
 
 	private void Awake()
 	{
+		
 		timer = new Timer();
 		activeLevelTimer = this;
 		if (pauseOnAwake)

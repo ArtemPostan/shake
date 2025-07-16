@@ -1,15 +1,21 @@
 using Com.LuisPedroFonseca.ProCamera2D;
 using System;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class Combat : MonoBehaviour
 {
-	public delegate void KillAllDelegate();
+    public event Action<Combat> OnDie;
+
+    public delegate void KillAllDelegate();
 
 	[SerializeField]
-	private int maxHealth = 10;
+	public int maxHealth = 10;
 
-	[SerializeField]
+    [SerializeField]
+    private int maxEnergy = 10;
+
+    [SerializeField]
 	private int team;
 
 	public float deadBodyStayTime = 4f;
@@ -51,7 +57,9 @@ public class Combat : MonoBehaviour
 
 	private int health;
 
-	private ParticleSystem.EmissionModule partEmi;
+    private int energy;
+
+    private ParticleSystem.EmissionModule partEmi;
 
 	private bool inited;
 
@@ -73,6 +81,8 @@ public class Combat : MonoBehaviour
 	[SerializeField]
 	private HeadFly headFly;
 
+	private EnemyDrop EnemyDrop;
+
 	private int MeleeWeaponAttackID = -1;
 
 	public SnakePart Part => part;
@@ -83,13 +93,18 @@ public class Combat : MonoBehaviour
 
 	public Gun Gun => gun;
 
-	public float HealthPercent => Mathf.Clamp01((float)health / (float)maxHealth);
+	[SerializeField] GameObject Follower;
 
-	private void Awake()
+	public float HealthPercent => Mathf.Clamp01((float)health / (float)maxHealth);
+    public float EnergyPercent => Mathf.Clamp01((float)energy / (float)maxEnergy);
+
+    private void Awake()
 	{
 		Init();
 		KillAllStaticEvent = (KillAllDelegate)Delegate.Combine(KillAllStaticEvent, new KillAllDelegate(KillIfNotHead));
-	}
+        EnemyDrop = GetComponent<EnemyDrop>();
+
+    }
 
 	private void OnDestroy()
 	{
@@ -210,11 +225,14 @@ public class Combat : MonoBehaviour
 			if ((bool)headPoint && Vector3.Distance(_hurtPoint, headPoint.position) <= headPointRadius)
 			{
 				health -= hurt;
-			}
-			if (IsHead())
+                
+            }
+           
+            if (IsHead())
 			{
 				GameManager.Instance.PostManager.StartHurt();
-			}
+                GameManager.Instance.UIManager.UpdateUI();
+            }
 			if (health <= 0)
 			{
 				if (IsHead())
@@ -274,8 +292,13 @@ public class Combat : MonoBehaviour
 		}
 		else
 		{
+			if (GameManager.Instance.LevelManager.gameMode == LevelManager.gameModes.survive)
+			{
+                EnemyDrop.DropItems();
+				
+            }
 			DataManager.CountEnemyKilled();
-		}
+        }
 		if (ring != null)
 		{
 			ring.SetActive(value: false);
@@ -308,7 +331,12 @@ public class Combat : MonoBehaviour
 			partEmi.rateOverDistance = 0f;
 			bloodParticle.Play();
 		}
-	}
+
+        if (team == 1)
+        {
+            OnDie?.Invoke(this);
+        }
+    }
 
 	private void DeadCount()
 	{
@@ -440,4 +468,24 @@ public class Combat : MonoBehaviour
 	{
 		isBlack = true;
 	}
+
+	public void UpdateEnergy()
+    {
+        energy++;
+		if (energy >= maxEnergy) 
+		{
+			energy = 0;
+            maxEnergy += 5;
+			Instantiate(Follower, transform.position, Quaternion.identity);
+		}
+
+		GameManager.Instance.UIManager.UpdateUI();
+	}
+
+    public void UpdateHealth()
+    {
+        health += 5;
+        health = Mathf.Clamp(health, 0 , maxHealth);
+        GameManager.Instance.UIManager.UpdateUI();
+    }
 }

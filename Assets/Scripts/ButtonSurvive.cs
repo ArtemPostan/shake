@@ -9,6 +9,7 @@ public class ButtonSurvive : ButtonBehaviour
     {
         if (SceneManager.GetActiveScene().name != "LevelSurvive")
         {
+            GameManager.Instance.LevelManager.gameMode = LevelManager.gameModes.survive;
             SceneManager.LoadScene("LevelSurvive"); return;
         }
         

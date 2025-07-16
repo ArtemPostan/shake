@@ -1,7 +1,10 @@
+using UnityEngine.SceneManagement;
+
 public class Button_ReturnToBase : ButtonBehaviour
 {
 	protected override void OnClick()
 	{
-		LevelManager.instance.TryLoadLevel(0);
+        GameManager.Instance.LevelManager.gameMode = LevelManager.gameModes.single;
+        LevelManager.instance.TryLoadLevel(0);
 	}
 }
