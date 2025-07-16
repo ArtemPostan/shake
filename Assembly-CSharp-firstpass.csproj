@@ -415,8 +415,8 @@
     <Compile Include="Assets\Standard Assets\Scripts\RemoteStorageDownloadUGCResult_t.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\Steamworks\SteamMatchmakingServers.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3TypeMgr.cs" />
-    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Keyframe.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\HTML_BrowserRestarted_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Keyframe.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EUserUGCList.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Matrix4x4.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_TextureArray.cs" />
@@ -577,8 +577,8 @@
     <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ERemoteStoragePlatform.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\SteamLeaderboardEntries_t.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_uintArray.cs" />
-    <Compile Include="Assets\Standard Assets\Scripts\StartPlaytimeTrackingResult_t.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\StoreAuthURLResponse_t.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\StartPlaytimeTrackingResult_t.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\ES3Internal\ES3RefIdDictionary.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\SteamRemotePlaySessionDisconnected_t.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\RemoveUGCDependencyResult_t.cs" />

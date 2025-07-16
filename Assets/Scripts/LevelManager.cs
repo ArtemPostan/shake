@@ -6,7 +6,8 @@ public class LevelManager : MonoBehaviour
 	public enum gameModes
 	{
 		rescue,
-		single
+		single,
+		survive
 	}
 
 	public enum game3Ctypes
@@ -73,7 +74,7 @@ public class LevelManager : MonoBehaviour
 
 	private int toLoadIndex;
 
-	private bool countStarted;
+	private bool countStarted;	
 
 	public static LevelManager instance
 	{
@@ -428,6 +429,11 @@ public class LevelManager : MonoBehaviour
 
 	private void UpdateUICount()
 	{
+		if (gameMode == gameModes.survive)
+		{
+            GameManager.Instance.UIManager.UpdateCount(teamBroCount, unsavedBroCount, targetCount);
+			return;
+        }
 		GameManager.Instance.UIManager.UpdateCount(teamBroCount, unsavedBroCount, targetCount);
 	}
 

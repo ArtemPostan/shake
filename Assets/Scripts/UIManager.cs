@@ -9,7 +9,10 @@ public class UIManager : MonoBehaviour
 	[SerializeField]
 	private Image healthBarImage;
 
-	private Material healthBarMat;
+    [SerializeField]
+    private Image energyBarImage;
+
+    private Material healthBarMat;
 
 	[SerializeField]
 	private Text remainCountText;
@@ -39,7 +42,11 @@ public class UIManager : MonoBehaviour
 	[SerializeField]
 	private GameObject hudPanel;
 
-	private float overShowTimer;
+
+    [SerializeField]
+    private GameObject MobilePanel;   
+
+    private float overShowTimer;
 
 	private Color tempColor;
 
@@ -65,7 +72,11 @@ public class UIManager : MonoBehaviour
 		successCanvasGroup.alpha = 0f;
 		successCanvasGroup.gameObject.SetActive(value: false);
 		hudPanel.SetActive(value: true);
-		over = false;
+		if (GameManager.Instance.isMobile)
+		{
+			MobilePanel.SetActive(value: true);
+		}
+        over = false;
 		overShowTimer = 0f;
 	}
 
@@ -127,4 +138,17 @@ public class UIManager : MonoBehaviour
 		tempColor.a = alpha;
 		_text.color = tempColor;
 	}
+
+	public void isMobilePanelActive(bool isOn)
+	{
+		if (GameManager.Instance.isMobile)
+		{
+			if (isOn)
+			{
+				MobilePanel.SetActive(true); return;
+			}
+
+			MobilePanel.SetActive(false);
+		}
+    }
 }

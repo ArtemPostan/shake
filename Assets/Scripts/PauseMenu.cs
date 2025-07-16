@@ -26,16 +26,19 @@ public class PauseMenu : MonoBehaviour
 		{
 			if (LevelManager.Paused)
 			{
+				GameManager.Instance.UIManager.isMobilePanelActive(false);
 				show = true;
 			}
 			else
 			{
-				show = false;
+                GameManager.Instance.UIManager.isMobilePanelActive(true);
+                show = false;
 			}
 		}
 		else
 		{
-			show = false;
+            GameManager.Instance.UIManager.isMobilePanelActive(true);
+            show = false;
 		}
 	}
 

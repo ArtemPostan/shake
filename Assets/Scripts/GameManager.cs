@@ -1,3 +1,4 @@
+using GamePush;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -46,10 +47,14 @@ public class GameManager : MonoBehaviour
 
 	public int currentLevel => levelManager.levelInfo.currentLevelIndex;
 
+	public bool isMobile;
+
 	public void Init()
 	{
 		Object.DontDestroyOnLoad(base.gameObject);
 		instance = this;
+		isMobile = GP_Device.IsMobile();
+		//isMobile = false;
 		DataManager.SetSavesIndex(0);
 		DataManager.Load();
 		levelManager = GetComponent<LevelManager>();

@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\TopDownShooter\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\LocalizationManager.cs" />
     <Compile Include="Assets\Scripts\TopCamera.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\Scripts\Breakable.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\ProCamera2D.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\Platformer\ToggleCinematics.cs" />
@@ -99,7 +100,9 @@
     <Compile Include="Assets\Scripts\MeleeWeaponDamage.cs" />
     <Compile Include="Assets\Scripts\AmplifyColor\Tonemapping.cs" />
     <Compile Include="Assets\Scripts\RenderCamera.cs" />
+    <Compile Include="Assets\Scripts\ButtonSurvive.cs" />
     <Compile Include="Assets\Scripts\Button_Retry.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\Scripts\ShellDrop.cs" />
     <Compile Include="Assets\Scripts\Boom.cs" />
     <Compile Include="Assets\Scripts\Aimer.cs" />
@@ -143,6 +146,7 @@
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\TopDownShooter\GameOver.cs" />
     <Compile Include="Assets\Scripts\PostManager.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\ProCamera2DTriggerInfluence.cs" />
+    <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\Scripts\RenderFactorConfiguration.cs" />
     <Compile Include="Assets\Scripts\ListenerSetter.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\TriggerShape.cs" />
@@ -221,11 +225,13 @@
     <Compile Include="Assets\Scripts\EnemyMove.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\ProCamera2DLimitDistance.cs" />
     <Compile Include="Assets\Scripts\CameraManager.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Scripts\DestroyOverLife.cs" />
     <Compile Include="Assets\Scripts\SnakeHead.cs" />
     <Compile Include="Assets\Scripts\AdvancedSettings.cs" />
     <Compile Include="Assets\Scripts\SnakeTargetTest.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\Scripts\AutoAddForce.cs" />
     <Compile Include="Assets\Scripts\AmplifyColor\VolumeEffectFlags.cs" />
     <Compile Include="Assets\Scripts\PlayASound.cs" />
@@ -248,8 +254,10 @@
     <Compile Include="Assets\Scripts\UI_Button_SelectLanguage.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\TransitionFXDirection.cs" />
     <Compile Include="Assets\Scripts\SunFog.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\Scripts\AmplifyColorVolumeBase.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\TopDownShooter\PlayerFire.cs" />
+    <Compile Include="Assets\Scripts\SurviveLevel.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\ProCamera2DPixelPerfect.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\BaseTrigger.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\TopDownShooter\DoorKey.cs" />
@@ -272,6 +280,7 @@
     <Compile Include="Assets\Scripts\PhysicsManager.cs" />
     <Compile Include="Assets\Scripts\DataManager.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\AutoScaleMode.cs" />
+    <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\Scripts\FriendlyDamageSwitch.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\FollowMode.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\ProCamera2DForwardFocus.cs" />
