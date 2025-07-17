@@ -64,8 +64,6 @@ public class SurviveLevel : MonoBehaviour
 
     private void OnEnemyKilled(Combat deadEnemy)
     {
-        
-        
         enemiesAlive--;
         enemiesKilledTotal++;
         UpdateUI(currentWave, enemiesAlive, enemiesKilledTotal);

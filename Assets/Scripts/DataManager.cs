@@ -11,6 +11,9 @@ public class DataManager : MonoBehaviour
         public string skinName;
         public List<string> levelsEntered = new List<string>();
 
+        public bool surviveModeUnlocked;
+        [NonSerialized] public bool surviveModeTempAccess;
+
         public int stat_count_deaths;
         public int stat_count_bulletShots;
         public int stat_count_friendlyDeaths;
@@ -86,6 +89,8 @@ public class DataManager : MonoBehaviour
             customFloatValues = new Dictionary<string, float>();
             customIntValues = new Dictionary<string, int>();
             mouseSensitivity = 5f;
+
+            surviveModeUnlocked = false;
         }
     }
 
@@ -307,6 +312,23 @@ public class DataManager : MonoBehaviour
             SetAchievement($"levelFinished_{context.levelIndex}", save: false);
 
         Save();
+        CheckUnlockSurviveMode();
+    }
+
+    public static void CheckUnlockSurviveMode()
+    {
+        if (data.stat_levels_finished_01 > 0 &&
+            data.stat_levels_finished_02 > 0 &&
+            data.stat_levels_finished_03 > 0 &&
+            data.stat_levels_finished_04 > 0 &&
+            data.stat_levels_finished_05 > 0)
+        {
+            if (!data.surviveModeUnlocked)
+            {
+                UnlockSurviveModePermanent();
+                Debug.Log("Survive mode permanently unlocked!");
+            }
+        }
     }
 
     public static void SavedABro(SaveBroContext context)
@@ -343,4 +365,20 @@ public class DataManager : MonoBehaviour
     public static void ClearAchievement(string name) { /* Stub */ }
 
     public static void ClearAllAchievements() { /* Stub */ }
+
+    public static void GrantSurviveModeTempAccess()
+    {
+        data.surviveModeTempAccess = true;
+    }
+
+    public static void UnlockSurviveModePermanent()
+    {
+        data.surviveModeUnlocked = true;
+        Save();
+    }
+
+    public static bool IsSurviveModeAvailable()
+    {
+        return data.surviveModeUnlocked || data.surviveModeTempAccess;
+    }
 }

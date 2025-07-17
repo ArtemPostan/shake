@@ -50,6 +50,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 131072
+  moveSpeed: 7
+  maxDistance: 20
 --- !u!114 &1791768366284264392
 MonoBehaviour:
   m_ObjectHideFlags: 0

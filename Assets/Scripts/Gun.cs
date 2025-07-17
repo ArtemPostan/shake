@@ -153,15 +153,14 @@ public class Gun : MonoBehaviour
         }
         else
         {
-            // ИГРОК на телефоне — стреляет по направлению джойстика
             Vector3 inputDir = new Vector3(fireJoystick.Horizontal, 0f, fireJoystick.Vertical);
 
-            if (inputDir.magnitude > 0.2f)
+            if (inputDir.magnitude > 0.2f && LevelManager.instance.Pointer != null)
             {
                 shouldShoot = true;
-                Transform cam = GameManager.Instance.CameraManager.TopDownCameraArm.transform;
-                shootDirection = cam.rotation * inputDir.normalized;
-                shootDirection = FCTool.Vector3YToZero(shootDirection).normalized;
+
+                Vector3 toPointer = LevelManager.instance.Pointer.position - transform.position;
+                shootDirection = FCTool.Vector3YToZero(toPointer).normalized;
             }
         }
 

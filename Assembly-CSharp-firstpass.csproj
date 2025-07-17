@@ -547,8 +547,8 @@
     <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3ComponentType.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_SizeBySpeedModule.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\GSPolicyResponse_t.cs" />
-    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_VelocityOverLifetimeModule.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\Steamworks\ESteamControllerPad.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_VelocityOverLifetimeModule.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\Steamworks\EMouseCursor.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\ES3Types\ES3Type_Color.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\HSteamUser.cs" />

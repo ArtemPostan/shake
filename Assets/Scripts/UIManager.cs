@@ -3,7 +3,14 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-     
+	//для ПК
+    [SerializeField]
+    private GameObject SuccesPC, FailedPC;
+
+    //для Mobile
+    [SerializeField]
+    private GameObject SuccesMob, FailedMob;
+
     [SerializeField]
     private Text remainAliveCountText, targetWaveCountText;
 
@@ -21,6 +28,9 @@ public class UIManager : MonoBehaviour
     private Image energyBarImage;
 
 	[SerializeField] GameObject EnergyPanel;
+
+	[SerializeField]
+	private GameObject ReviveButton;
 
     private Material healthBarMat;	
 
@@ -77,7 +87,9 @@ public class UIManager : MonoBehaviour
 		if (GameManager.Instance.isMobile)
 		{
             isMobilePanelActive(true);
-			return;
+			SuccessFailedButtonTurnOn();
+
+            return;
         }
         isMobilePanelActive(false);
     }
@@ -120,10 +132,10 @@ public class UIManager : MonoBehaviour
 
 	private void Update()
 	{
-		if (GameManager.Instance.LevelManager.Player != null)
-		{
-			healthBarMat.SetFloat("_CutValue", GameManager.Instance.LevelManager.Player.Combat.HealthPercent);
-		}
+		//if (GameManager.Instance.LevelManager.Player != null)
+		//{
+		//	healthBarMat.SetFloat("_CutValue", GameManager.Instance.LevelManager.Player.Combat.HealthPercent);
+		//}
 		if (over && overShowTimer < overShowTime)
 		{
 			overShowTimer += Time.unscaledDeltaTime;
@@ -169,22 +181,35 @@ public class UIManager : MonoBehaviour
 		{
 			if (isOn)
 			{
-				MobilePanel.SetActive(true); return;
+                
+                MobilePanel.SetActive(true); 
+				return;
+
 			}
 
-			MobilePanel.SetActive(false);
-		}
+			MobilePanel.SetActive(false);           
+        }
+    }
+
+	public void SuccessFailedButtonTurnOn()
+	{
+        SuccesMob.SetActive(true);
+        FailedMob.SetActive(true);
+		SuccesPC.SetActive(false);
+		FailedPC.SetActive(false);
     }
 	public void UpdateTitles(bool isSurvive)
 	{
 		if (isSurvive)
 		{
-			remainTitle.text = "Alive";
-			targetTitle.text = "Wave";
+			remainTitle.text = "ALIVE";
+			targetTitle.text = "WAVE";
             TimerPanel.SetActive(false);
             EnergyPanel.SetActive(true);
         } else
 		{
+            remainTitle.text = "HOSTAGES";
+            targetTitle.text = "TARGET";
             TimerPanel.SetActive(true);
             EnergyPanel.SetActive(false);
         }
@@ -201,5 +226,34 @@ public class UIManager : MonoBehaviour
         energyBarImage.fillAmount = GameManager.Instance.LevelManager.Player.Combat.EnergyPercent;
         healthBarImage.fillAmount = GameManager.Instance.LevelManager.Player.Combat.HealthPercent;
 
+    }
+
+	public void HideDefeatPanel()
+	{
+        hudPanel.SetActive(value: true);
+        over = false;
+        defeatCanvasGroup.gameObject.SetActive(value: false);
+    }
+
+	public void ShowReviveButton(bool isOn)
+	{
+		if (isOn)
+		{
+			ReviveButton.SetActive(true);
+			return;
+		}
+        ReviveButton.SetActive(false);
+    }
+
+    public void OnReviveButtonClicked()
+    {
+        RewardedManager.Instance.ShowRewardedAdRevive();        // для тестирования воскрешения
+        ShowReviveButton(false);
+    }
+
+    public void OnOpenSurviveModeButtonClicked()
+    {
+        RewardedManager.Instance.ShowRewardedAdOpenSurviveMode();
+        //ShowOpenSurviveModeButton(false);
     }
 }

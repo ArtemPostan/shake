@@ -120,6 +120,7 @@
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\ProCamera2DPanAndZoom.cs" />
     <Compile Include="Assets\Scripts\CameraCollisionState.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\ProCamera2DLetterbox.cs" />
+    <Compile Include="Assets\Scripts\RewardedManager.cs" />
     <Compile Include="Assets\Scripts\FpsCameraArm.cs" />
     <Compile Include="Assets\Scripts\JumpPad.cs" />
     <Compile Include="Assets\Scripts\AmplifyColor\Quality.cs" />

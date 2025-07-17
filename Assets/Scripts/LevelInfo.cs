@@ -28,15 +28,18 @@ public class LevelInfo : MonoBehaviour
 			gameManager.Init();
 			gameManager.LevelManager.gameMode = testGameMode;			
 			gameManager.LevelManager.game3CType = testGame3CTypes;
-			gameManager.LevelManager.SetLevelIndex(currentLevelIndex);
+			gameManager.LevelManager.SetLevelIndex(currentLevelIndex);			
 			SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
 		}
-		GameManager.Instance.LevelManager.levelInfo = this;
+        GameManager.Instance.LevelManager.SetLevelIndex(currentLevelIndex);
+		Debug.Log("current level " + currentLevelIndex);
+        GameManager.Instance.LevelManager.levelInfo = this;
 		GameManager.Instance.LevelManager.StartLevel(base.transform.position, targetCount);
 		for (int i = 0; i < countTexts.Count; i++)
 		{
 			countTexts[i].text = targetCount.ToString();
 		}
+		if (currentLevelIndex != 10)
 		DataManager.SetEnteredLevel("Level" + currentLevelIndex.ToString());
 	}
 

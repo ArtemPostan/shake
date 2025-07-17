@@ -24,8 +24,20 @@ public class CameraManager : MonoBehaviour
 
 	public void Init(PlayerControl player, Transform pointerTransform)
 	{
-		topDownCameraArm = UnityEngine.Object.Instantiate(TopDownCameraArmPfb);
-		topDownCameraArm.ProCamera2d.AddCameraTarget(player.transform, 1f, 1f, 0f, cameraTargetOffset);
+        // 1. Удаляем старые объекты, если они ест
+        if (topDownCameraArm != null)
+        {
+            Destroy(topDownCameraArm.gameObject);
+            topDownCameraArm = null;
+        }
+
+        if (renderCamera != null)
+        {
+            Destroy(renderCamera.gameObject);
+            renderCamera = null;
+        }
+        topDownCameraArm = Instantiate(TopDownCameraArmPfb);
+        topDownCameraArm.ProCamera2d.AddCameraTarget(player.transform, 1f, 1f, 0f, cameraTargetOffset);
 		topDownCameraArm.ProCamera2d.AddCameraTarget(pointerTransform, 0.35f, 0.35f, 0f, cameraTargetOffset);
 		renderCamera = UnityEngine.Object.Instantiate(renderCameraPfb);
 		renderCamera.SetTarget(topDownCameraArm.VirtualCamera);

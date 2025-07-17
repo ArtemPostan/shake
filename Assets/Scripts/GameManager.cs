@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
 		Object.DontDestroyOnLoad(base.gameObject);
 		instance = this;
 		isMobile = GP_Device.IsMobile();
-		//isMobile = false;
+		//isMobile = false;   //для тестирования в редакторе
 		DataManager.SetSavesIndex(0);
 		DataManager.Load();
 		levelManager = GetComponent<LevelManager>();

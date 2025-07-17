@@ -132,4 +132,10 @@ public class TopDownCameraArm : MonoBehaviour
 		virtualCamera.transform.position = FCTool.Vector3YToZero(virtualCamera.transform.position) + Vector3.up * Mathf.Lerp(virtualCamera.transform.position.y, target.position.y + 5.5f, deadFadeLerp);
 		virtualCamera.transform.rotation = Quaternion.Lerp(startRotation, Quaternion.LookRotation(target.position - virtualCamera.transform.position), deadFadeLerp);
 	}
+
+    public void SetTarget(Transform newTarget)
+    {
+        target = newTarget;
+        gameStarted = true;
+    }
 }

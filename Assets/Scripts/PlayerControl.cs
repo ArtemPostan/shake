@@ -181,5 +181,4 @@ public class PlayerControl : MonoBehaviour
         fpsPitch = Mathf.Clamp(fpsPitch, -89.9f, 89.9f);
         firstPersonCameraTransform.localRotation = Quaternion.Euler(fpsPitch, 0f, 0f);
     }
-   
 }

@@ -7,10 +7,10 @@ public class ButtonSurvive : ButtonBehaviour
 {
     protected override void OnClick()
     {
-        if (SceneManager.GetActiveScene().name != "LevelSurvive")
+        if (SceneManager.GetActiveScene().buildIndex != 10)
         {
             GameManager.Instance.LevelManager.gameMode = LevelManager.gameModes.survive;
-            SceneManager.LoadScene("LevelSurvive"); return;
+            SceneManager.LoadScene(10); return;
         }
         
         LevelManager.Resume();

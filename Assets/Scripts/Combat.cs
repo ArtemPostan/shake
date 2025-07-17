@@ -1,4 +1,5 @@
 using Com.LuisPedroFonseca.ProCamera2D;
+using GamePush;
 using System;
 using UnityEngine;
 using static UnityEngine.EventSystems.EventTrigger;
@@ -272,10 +273,18 @@ public class Combat : MonoBehaviour
 		AudioManager.PlaySFXAtPosition("Scream", base.transform.position);
 		if (team != 1)
 		{
-			if (IsHead())
+			if (IsHead() && GameManager.Instance.LevelManager.gameMode != LevelManager.gameModes.survive)
 			{
-				DataManager.CountPlayerDead();
-			}
+                GP_Ads.ShowFullscreen();
+                DataManager.CountPlayerDead();
+			} else if (GameManager.Instance.LevelManager.gameMode == LevelManager.gameModes.survive)
+			{
+                if (IsHead())
+                {
+                    ShowReviveButton();
+                }               
+				return;
+            }
 			DataManager.CountFriendlyDead();
 			if (_killerTeam != 1)
 			{
@@ -488,4 +497,20 @@ public class Combat : MonoBehaviour
         health = Mathf.Clamp(health, 0 , maxHealth);
         GameManager.Instance.UIManager.UpdateUI();
     }
+
+	private void ShowReviveButton()
+	{
+		GameManager.Instance.UIManager.ShowReviveButton(true);
+	}
+
+	public void RessurectPlayer()
+	{
+        health = maxHealth;
+        energy = 0;
+        gun.Active = true;
+        gun.gameObject.SetActive(value: true);
+        dead = false;
+        GameManager.Instance.UIManager.UpdateUI();
+    }
+	
 }

@@ -1,5 +1,7 @@
+using GamePush;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class LevelManager : MonoBehaviour
 {
@@ -167,8 +169,10 @@ public class LevelManager : MonoBehaviour
 	}
     private void Start()
 	{
-		if (GameManager.Instance.isMobile)
-			InvisePointer();
+		//if (GameManager.Instance.isMobile)
+		//{
+  //          InvisePointer(true); return;
+  //      } InvisePointer(false);
 
 	}
 
@@ -191,9 +195,14 @@ public class LevelManager : MonoBehaviour
 		}
 		if (gameState == gameStates.defeat)
 		{
-			if (UnityEngine.Input.GetKeyDown(KeyCode.R))
+            if (GameManager.Instance.LevelManager.gameMode == gameModes.survive)
+            {
+                Cursor.visible = true;
+            }
+            if (UnityEngine.Input.GetKeyDown(KeyCode.R))
 			{
-				TryLoadLevel(levelIndex);
+                
+                TryLoadLevel(levelIndex);
 			}
 		}
 		else if (gameState == gameStates.success)
@@ -222,11 +231,16 @@ public class LevelManager : MonoBehaviour
 
 	public void StartLevel(Vector3 _startPoint, int _targetCount)
 	{
+		if (levelInfo.currentLevelIndex != 2)
+		{
+            GP_Ads.ShowFullscreen();
+        }
+		
 		if (gameMode == gameModes.survive)
 		{
 			GameManager.Instance.UIManager.ResetUI();
             SurviveLevel = GameObject.Find("SurviveLevel")?.GetComponent<SurviveLevel>();
-            targetCount = SurviveLevel.currentWave;
+            targetCount = 0;
         }
 		
        
@@ -443,17 +457,19 @@ public class LevelManager : MonoBehaviour
 	{
 		if (gameMode == gameModes.survive)
 		{
-            GameManager.Instance.UIManager.UpdateTitles(true);
-            GameManager.Instance.UIManager.UpdateCount(SurviveLevel.currentWave, SurviveLevel.enemiesAlive, SurviveLevel.enemiesKilledTotal);
+			GameManager.Instance.UIManager.UpdateTitles(true);
+			GameManager.Instance.UIManager.UpdateCount(SurviveLevel.currentWave, SurviveLevel.enemiesAlive, SurviveLevel.enemiesKilledTotal);
 			return;
-        }
-		GameManager.Instance.UIManager.UpdateCount(teamBroCount, unsavedBroCount, targetCount);
+		}
+        GameManager.Instance.UIManager.UpdateTitles(false);
+        GameManager.Instance.UIManager.UpdateCount(teamBroCount, unsavedBroCount, targetCount);
 	}
 
 	public void TryLoadLevel(int _levelIndex, bool delay = false)
 	{
 		if (!readyToLoad)
 		{
+			Debug.Log("Пытаемся загрузить уроень");
 			readyToLoad = true;
 			GameManager.Instance.CameraManager.RenderCamera.FadeOut();
 			toLoadIndex = _levelIndex;
@@ -494,11 +510,41 @@ public class LevelManager : MonoBehaviour
 		if (instance != null)
 		{
 			instance.TryLoadLevel(instance.levelIndex);
+			Debug.Log("Индекс уровна " +  instance.levelIndex);
 		}
 	}
 
-	private void InvisePointer()
+	public void OnClick_NextLevel()
 	{
-		pointerPfb.GetComponent<SpriteRenderer>().enabled = false;
-	}
+        if (levelInfo.hasNextLevel)
+        {
+            TryLoadLevel(levelIndex + 1);
+        }
+        else
+        {
+            TryLoadLevel(0);
+        }
+    }
+
+    public void Ressurect()
+    {
+        GameManager.Instance.TimeScaleManager.ResetTimeScales();
+
+        // 1. Обновим состояние уровня
+        gameState = gameStates.playing;
+        gameMode = gameModes.survive;
+        game3CType = game3Ctypes.topDown;        
+
+        // 3. Обновляем камеру (создаёт новый TopDownCameraArm)
+        GameManager.Instance.CameraManager.Init(Player, pointer.transform);
+
+        // 4. Назначаем виртуальную камеру Pointer (после Init!)
+        pointer.virtualCamera = GameManager.Instance.CameraManager.TopDownCameraArm.VirtualCamera;        
+
+        pointer.gameObject.SetActive(true); // просто включаем pointe
+
+        Player.Combat.RessurectPlayer();
+
+        GameManager.Instance.UIManager.HideDefeatPanel();
+    }
 }
