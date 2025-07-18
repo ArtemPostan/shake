@@ -17,8 +17,6 @@ public class ButtonSurvive : ButtonBehaviour
             isLock = false;
             lockImage.SetActive(false);
         }
-
-        //isLock = false; //для тестирования
     }
     protected override void OnClick()
     {       

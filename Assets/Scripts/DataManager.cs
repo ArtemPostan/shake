@@ -368,6 +368,7 @@ public class DataManager : MonoBehaviour
 
     public static void GrantSurviveModeTempAccess()
     {
+        GameManager.Instance.LevelManager.gameMode = LevelManager.gameModes.survive;
         SceneManager.LoadScene(10);
     }
 
