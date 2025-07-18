@@ -9,9 +9,10 @@ public class Magnet : Receavable
     public float reachDistance = 0.5f;
 
     private Transform playerTransform;
-
+     
     public override void ItemUsage(Combat playerCombat)
     {
+        
         playerTransform = playerCombat.transform;
 
         // Скрываем магнит, чтобы он "исчез"

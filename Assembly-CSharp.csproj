@@ -286,6 +286,7 @@
     <Compile Include="Assets\Scripts\DataManager.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\AutoScaleMode.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+    <Compile Include="Assets\BTM_Assets\BTM_Items_Gems\Scripts\SimpleGemsAnim.cs" />
     <Compile Include="Assets\Scripts\FriendlyDamageSwitch.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\FollowMode.cs" />
     <Compile Include="Assets\Scripts\Com\LuisPedroFonseca\ProCamera2D\ProCamera2DForwardFocus.cs" />

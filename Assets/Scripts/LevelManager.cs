@@ -231,7 +231,12 @@ public class LevelManager : MonoBehaviour
 
 	public void StartLevel(Vector3 _startPoint, int _targetCount)
 	{
-		if (levelInfo.currentLevelIndex != 2)
+		if (GameManager.Instance.isMobile)
+		{
+            GameManager.Instance.UIManager.isMobilePanelActive(true);
+        }
+        
+        if (levelInfo.currentLevelIndex != 0)
 		{
             GP_Ads.ShowFullscreen();
         }
@@ -260,7 +265,8 @@ public class LevelManager : MonoBehaviour
 		enemyKillCount = 0;
 		UpdateUICount();
 		Paused = false;
-	}
+        Debug.Log("Spawned player with gun: " + player.GetComponent<Combat>().Gun?.name);
+    }
 
 	public void Defeat(DefeatType _type)
 	{
@@ -268,7 +274,10 @@ public class LevelManager : MonoBehaviour
 		{
 			return;
 		}
-		pointer.gameObject.SetActive(value: false);
+		GameManager.Instance.UIManager.isMobilePanelActive(false);
+		
+        GP_Ads.ShowFullscreen();
+        pointer.gameObject.SetActive(value: false);
 		AudioManager.PlaySFX("Game_Fail");
 		if (readyToLoad || gameState != gameStates.playing)
 		{
@@ -358,7 +367,8 @@ public class LevelManager : MonoBehaviour
 
 	public void Success()
 	{
-		if (!readyToLoad && gameState == gameStates.playing)
+        GameManager.Instance.UIManager.isMobilePanelActive(false);
+        if (!readyToLoad && gameState == gameStates.playing)
 		{
 			GameManager.Instance.CameraManager.TopDownCameraArm.Over();
 			gameState = gameStates.success;
@@ -529,19 +539,16 @@ public class LevelManager : MonoBehaviour
     public void Ressurect()
     {
         GameManager.Instance.TimeScaleManager.ResetTimeScales();
-
-        // 1. Обновим состояние уровня
+		        
         gameState = gameStates.playing;
         gameMode = gameModes.survive;
         game3CType = game3Ctypes.topDown;        
-
-        // 3. Обновляем камеру (создаёт новый TopDownCameraArm)
+		       
         GameManager.Instance.CameraManager.Init(Player, pointer.transform);
-
-        // 4. Назначаем виртуальную камеру Pointer (после Init!)
+		       
         pointer.virtualCamera = GameManager.Instance.CameraManager.TopDownCameraArm.VirtualCamera;        
 
-        pointer.gameObject.SetActive(true); // просто включаем pointe
+        pointer.gameObject.SetActive(true); 
 
         Player.Combat.RessurectPlayer();
 

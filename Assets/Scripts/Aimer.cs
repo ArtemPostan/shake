@@ -84,10 +84,11 @@ public class Aimer : MonoBehaviour
 
                         if (inputDir.magnitude > 0.2f)
                         {
-                            Transform cam = GameManager.Instance.CameraManager.TopDownCameraArm.transform;
-                            Vector3 lookDir = cam.rotation * inputDir.normalized;
-                            lookDir = FCTool.Vector3YToZero(lookDir.normalized);
-                            base.transform.rotation = Quaternion.LookRotation(lookDir, Vector3.up);
+                            if (pointer != null)
+                            {
+                                Vector3 toPointer = FCTool.Vector3YToZero(pointer.position - transform.position).normalized;
+                                base.transform.rotation = Quaternion.LookRotation(toPointer, Vector3.up);
+                            }                           
                             break;
                         }
                     }

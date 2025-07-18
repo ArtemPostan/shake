@@ -180,14 +180,13 @@ public class UIManager : MonoBehaviour
 		if (GameManager.Instance.isMobile)
 		{
 			if (isOn)
-			{
-                
+			{           
                 MobilePanel.SetActive(true); 
 				return;
 
 			}
-
-			MobilePanel.SetActive(false);           
+			MobilePanel.SetActive(false);
+			
         }
     }
 

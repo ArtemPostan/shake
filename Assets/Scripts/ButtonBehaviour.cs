@@ -6,7 +6,7 @@ public class ButtonBehaviour : MonoBehaviour
 {
 	protected Button button;
 
-	private void OnEnable()
+	public void OnEnable()
 	{
 		button = GetComponent<Button>();
 		button.onClick.AddListener(OnClick);

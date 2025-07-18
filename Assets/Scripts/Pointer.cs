@@ -12,16 +12,16 @@ public class Pointer : MonoBehaviour
     [SerializeField]
     private LayerMask groundLayer;
 
-    private Vector3 currentPosition;
-
-    private Joystick fireJoystick;
-
     [SerializeField]
     private float moveSpeed = 30f;
 
     [SerializeField]
-    private float maxDistance = 20f; // максимум, насколько Pointer может отойти от игрока
+    private float maxDistance = 20f;
 
+    [SerializeField]
+    private float screenBorderClamp = 0.05f; // границы, чтобы не выходил за экран
+
+    private Joystick fireJoystick;
     private Transform player;
 
     private void Start()
@@ -30,45 +30,59 @@ public class Pointer : MonoBehaviour
         hitInfo = new RaycastHit[1];
 
         if (GameManager.Instance.isMobile)
+        {
             fireJoystick = GameManager.Instance.UIManager.FireJoystickUI.GetComponent<Joystick>();
+        }
 
-        currentPosition = transform.position;
         player = GameManager.Instance.LevelManager.Player.transform;
     }
 
     private void Update()
     {
-        if (virtualCamera == null) return;
+        if (virtualCamera == null || player == null)
+            return;
 
         if (!GameManager.Instance.isMobile)
         {
-            // ПК — старый способ (по мыши)
-            ray = virtualCamera.ScreenPointToRay(UnityEngine.Input.mousePosition);
+            // ПК — мышь
+            ray = virtualCamera.ScreenPointToRay(Input.mousePosition);
             if (Physics.RaycastNonAlloc(ray, hitInfo, 100f, groundLayer) > 0)
             {
                 transform.position = hitInfo[0].point;
             }
         }
-        else
+        else        
         {
+            // Мобилка — джойстик
             Vector3 input = new Vector3(fireJoystick.Horizontal, 0f, fireJoystick.Vertical);
             float inputMagnitude = Mathf.Clamp01(input.magnitude);
-            Vector3 moveDir = input.normalized;
 
-            // Желаемая позиция
-            Vector3 desiredWorldPos = player.position + moveDir * maxDistance * inputMagnitude;
+            Vector3 targetWorldPos;
 
-            // Переводим в viewport (0..1)
-            Vector3 viewportPos = virtualCamera.WorldToViewportPoint(desiredWorldPos);
+            if (inputMagnitude < 0.05f)
+            {
+                // Джойстик отпущен — вернуть Pointer перед игроком
+                Vector3 forward = player.forward;
+                targetWorldPos = player.position + forward * (maxDistance * 0.25f); // ближе к игроку
+            }
+            else
+            {
+                // Направление джойстика
+                Vector3 moveDir = input.normalized;
 
-            // Ограничим положение в пределах экрана
-            viewportPos.x = Mathf.Clamp(viewportPos.x, 0.05f, 0.95f);
-            viewportPos.y = Mathf.Clamp(viewportPos.y, 0.05f, 0.95f);  // можно исключить Y, если 2D
+                // Целевая позиция — дальше от игрока
+                targetWorldPos = player.position + moveDir * maxDistance * inputMagnitude;
+            }
 
-            // Возвращаем в мировые координаты
-            Vector3 clampedWorldPos = virtualCamera.ViewportToWorldPoint(viewportPos);
+            // Ограничим экранными границами
+            Vector3 viewPos = virtualCamera.WorldToViewportPoint(targetWorldPos);
+            viewPos.x = Mathf.Clamp(viewPos.x, screenBorderClamp, 1f - screenBorderClamp);
+            viewPos.y = Mathf.Clamp(viewPos.y, screenBorderClamp, 1f - screenBorderClamp);
+            viewPos.z = Mathf.Max(1f, viewPos.z);
 
-            // Обновляем позицию
+            Vector3 clampedWorldPos = virtualCamera.ViewportToWorldPoint(viewPos);
+            clampedWorldPos.y = player.position.y;
+
             transform.position = Vector3.Lerp(transform.position, clampedWorldPos, moveSpeed * Time.unscaledDeltaTime);
         }
     }

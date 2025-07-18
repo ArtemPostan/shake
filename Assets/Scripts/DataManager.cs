@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using GamePush;
+using UnityEngine.SceneManagement;
 
 public class DataManager : MonoBehaviour
 {
@@ -11,8 +12,7 @@ public class DataManager : MonoBehaviour
         public string skinName;
         public List<string> levelsEntered = new List<string>();
 
-        public bool surviveModeUnlocked;
-        [NonSerialized] public bool surviveModeTempAccess;
+        public bool surviveModeUnlocked;        
 
         public int stat_count_deaths;
         public int stat_count_bulletShots;
@@ -368,17 +368,12 @@ public class DataManager : MonoBehaviour
 
     public static void GrantSurviveModeTempAccess()
     {
-        data.surviveModeTempAccess = true;
+        SceneManager.LoadScene(10);
     }
 
     public static void UnlockSurviveModePermanent()
     {
         data.surviveModeUnlocked = true;
         Save();
-    }
-
-    public static bool IsSurviveModeAvailable()
-    {
-        return data.surviveModeUnlocked || data.surviveModeTempAccess;
     }
 }

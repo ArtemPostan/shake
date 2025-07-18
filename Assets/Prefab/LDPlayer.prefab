@@ -2794,7 +2794,7 @@ MonoBehaviour:
   team: 0
   deadBodyStayTime: 4
   animator: {fileID: 1791768365965497181}
-  gunPfb: {fileID: 1791768366284264447, guid: 9e51972328144aa992757ac3b7d431d3, type: 3}
+  gunPfb: {fileID: 1791768366284264447, guid: a9439599e2918dc4885fddec57276d9b, type: 3}
   topDownGunParent: {fileID: 1791768364438770230}
   fpsGunParent: {fileID: 1791768364438770351}
   rope: {fileID: 0}
@@ -2866,13 +2866,13 @@ MonoBehaviour:
   skins:
   - name: Default
     skinnedMeshRenderer: {fileID: 1791768366670140274}
-    gun: {fileID: 1791768366284264447, guid: 9e51972328144aa992757ac3b7d431d3, type: 3}
+    gun: {fileID: 1791768366284264447, guid: a9439599e2918dc4885fddec57276d9b, type: 3}
     ability_Floating: 0
     ability_IgnoreExplosion: 0
     ability_Dash: 0
   - name: KR
     skinnedMeshRenderer: {fileID: 1791768366670140278}
-    gun: {fileID: 1791768366284264449, guid: ad3c6da5859d4ff393f8c7a709ee1a8c, type: 3}
+    gun: {fileID: 1791768366284264447, guid: a9439599e2918dc4885fddec57276d9b, type: 3}
     ability_Floating: 0
     ability_IgnoreExplosion: 0
     ability_Dash: 0

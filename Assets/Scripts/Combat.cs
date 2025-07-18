@@ -128,7 +128,8 @@ public class Combat : MonoBehaviour
 			{
 				rope.SetActive(value: true);
 			}
-			ChangeGun(gunPfb);
+            
+            ChangeGun(gunPfb);
 			if (!IsHead() && team != 1 && ring != null)
 			{
 				ring.SetActive(value: false);
@@ -366,7 +367,8 @@ public class Combat : MonoBehaviour
 			UnityEngine.Object.Destroy(gun.gameObject);
 		}
 		gun = UnityEngine.Object.Instantiate(_gunPfb);
-		gun.ownerCombat = this;
+        Debug.Log("Using Gun prefab: " + gunPfb?.name, gunPfb);
+        gun.ownerCombat = this;
 		if (IsHead() && GameManager.Instance.LevelManager.game3CType == LevelManager.game3Ctypes.fps)
 		{
 			gun.transform.SetParent(fpsGunParent);
