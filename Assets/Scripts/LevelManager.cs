@@ -274,6 +274,7 @@ public class LevelManager : MonoBehaviour
 		{
 			return;
 		}
+		player.GetComponentInParent<PlayerControl>().ResetJoystick();
 		GameManager.Instance.UIManager.isMobilePanelActive(false);
 		
         GP_Ads.ShowFullscreen();
@@ -367,6 +368,7 @@ public class LevelManager : MonoBehaviour
 
 	public void Success()
 	{
+        player.GetComponentInParent<PlayerControl>().ResetJoystick();
         GameManager.Instance.UIManager.isMobilePanelActive(false);
         if (!readyToLoad && gameState == gameStates.playing)
 		{

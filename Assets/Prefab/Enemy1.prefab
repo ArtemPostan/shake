@@ -573,9 +573,9 @@ MonoBehaviour:
   healthPrefab: {fileID: 3317805162596211014, guid: dcb36ffcca261bf43b021df3479e2746, type: 3}
   magnetPrefab: {fileID: 3543314651451953092, guid: 683db2fb234386e4689b6296015aeb36, type: 3}
   bombPrefab: {fileID: 2372015162323122344, guid: 6679eaf47e968b14cb26bcfd698aea55, type: 3}
-  healthChance: 0.15
-  magnetChance: 0.2
-  bombChance: 0.1
+  healthChance: 0.17
+  magnetChance: 0.178
+  bombChance: 0.174
   dropOffset: {x: 0, y: 0.5, z: 0}
   scatterForce: 3
 --- !u!1 &1791768364388438401

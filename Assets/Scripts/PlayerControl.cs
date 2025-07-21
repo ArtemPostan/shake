@@ -27,7 +27,7 @@ public class PlayerControl : MonoBehaviour
     public float dashCoolTime = 0.5f;
     private float dashCoolTimer;
     public float dashSpeed = 20f;
-    private Vector3 dashDirection;
+    private Vector3 dashDirection;    
 
     public Transform firstPersonCameraTransform => fpsCameraArm.transform;
     public float MaxSpeed => maxSpeed;
@@ -116,7 +116,7 @@ public class PlayerControl : MonoBehaviour
                 (Input.GetKey(KeyCode.D) ? 1f : 0f) - (Input.GetKey(KeyCode.A) ? 1f : 0f),
                 0f,
                 (Input.GetKey(KeyCode.W) ? 1f : 0f) - (Input.GetKey(KeyCode.S) ? 1f : 0f)
-            );
+            );       
 
         Vector3 direction = input.normalized;
         float currentSpeed = dashMode ? fastSpeed : speed;
@@ -174,11 +174,16 @@ public class PlayerControl : MonoBehaviour
 
     private void UpdateFpsView()
     {
-        if (isMobile) return; // пока не реализовано для мобилок
+        if (isMobile) return;
 
         transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y + Input.GetAxis("mouse x") * fpsCameraArm.Sensitivity, 0f);
         fpsPitch += Input.GetAxis("mouse y") * -fpsCameraArm.Sensitivity;
         fpsPitch = Mathf.Clamp(fpsPitch, -89.9f, 89.9f);
         firstPersonCameraTransform.localRotation = Quaternion.Euler(fpsPitch, 0f, 0f);
+    }
+
+    public void ResetJoystick()
+    {        
+        joystick.OnPointerUp(null); // эмулирует отпускание пальца
     }
 }
